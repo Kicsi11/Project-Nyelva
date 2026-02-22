@@ -32,13 +32,36 @@ fetch('data/languages.geojson')
 
     // 2️⃣ Points (black diamonds, clickable)
     L.geoJSON(data, {
-      pointToLayer: (feature, latlng) => {
-        if (feature.properties.kind === 'point') {
-          return L.marker(latlng, {
-            icon: L.divIcon({
-              className: 'diamond-marker',
-              iconSize: [20, 20]
-            })
+   // POINT / DIAMOND LAYER
+L.geoJSON(data, {
+  filter: f => f.properties.kind === 'point',
+  pointToLayer: (feature, latlng) => {
+    const diamondSVG = `
+      <svg width="28" height="28" viewBox="0 0 24 24">
+        <polygon
+          points="12,0 24,12 12,24 0,12"
+          fill="black"
+          stroke="white"
+          stroke-width="2"
+        />
+      </svg>
+    `;
+
+    return L.marker(latlng, {
+      icon: L.divIcon({
+        html: diamondSVG,
+        className: '',
+        iconSize: [28, 28],
+        iconAnchor: [14, 14]
+      })
+    });
+  },
+  onEachFeature: (feature, layer) => {
+    layer.bindPopup(
+      `<strong>${feature.properties.language}</strong><br>${feature.properties.description || ''}`
+    );
+  }
+}).addTo(map);
           });
         }
       },
