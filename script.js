@@ -11,6 +11,24 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19
 }).addTo(map);
 
+// ===== INTRODUCTION POPUP =====
+const introPopup = L.popup({
+  maxWidth: 350,
+  closeOnClick: true,
+  autoClose: true,
+  closeButton: true,
+  className: 'intro-popup'
+})
+  .setLatLng([20, 0]) // center of the map
+  .setContent(`
+    <div style="text-align:center;">
+      <h2>🌍 Welcome to Nyelva Map!</h2>
+      <p>Discover languages around the world. Click on the diamonds to explore individual languages and see their regions highlighted.</p>
+      <p><em>Zoom in and pan the map to start exploring!</em></p>
+    </div>
+  `)
+  .openOn(map);
+
 // Load GeoJSON
 fetch('data/languages.geojson')
   .then(res => res.json())
