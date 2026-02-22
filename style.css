@@ -9,11 +9,12 @@ html, body {
   height: 100%;
 }
 
-/* Diamond markers */
+/* Diamond marker */
 .diamond-marker {
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   background: black;
   transform: rotate(45deg);
   border: 2px solid white; /* optional outline */
+  box-sizing: border-box;
 }
