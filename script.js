@@ -33,7 +33,7 @@ fetch('data/languages.geojson')
       pointToLayer: (feature, latlng) => {
 
         const diamondSVG = `
-          <svg width="28" height="28" viewBox="0 0 24 24">
+          <svg width="18" height="18" viewBox="0 0 24 24">
             <polygon
               points="12,0 24,12 12,24 0,12"
               fill="black"
@@ -47,8 +47,8 @@ fetch('data/languages.geojson')
           icon: L.divIcon({
             html: diamondSVG,
             className: '',
-            iconSize: [28, 28],
-            iconAnchor: [14, 14]
+            iconSize: [18, 18],
+            iconAnchor: [9, 9]
           })
         });
       },
