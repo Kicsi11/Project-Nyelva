@@ -1,9 +1,6 @@
 {
   "type": "FeatureCollection",
   "features": [
- {
-  "type": "FeatureCollection",
-  "features": [
     {
       "type": "Feature",
       "properties": {
@@ -64,22 +61,6 @@
           ]
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "language": "Papiamento",
-        "family": "Creole",
-        "kind": "point",
-        "description": "Creole language"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-68.9, 12.2]
-      }
-    }
-  ]
-}
     },
     {
       "type": "Feature",
