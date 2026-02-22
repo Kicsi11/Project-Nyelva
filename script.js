@@ -16,62 +16,48 @@ fetch('data/languages.geojson')
   .then(res => res.json())
   .then(data => {
 
-    // 1️⃣ Areas (non-clickable)
+    // ===== AREAS =====
     L.geoJSON(data, {
-      style: feature => {
-        if (feature.properties.kind === 'area') {
-          return {
-            color: '#444',
-            weight: 2,
-            fillOpacity: 0.5
-          };
-        }
-      },
-      filter: feature => feature.properties.kind === 'area'
+      filter: feature => feature.properties.kind === 'area',
+      style: feature => ({
+        color: '#444',
+        weight: 2,
+        fillColor: feature.properties.color || '#ccc',
+        fillOpacity: 0.5
+      })
     }).addTo(map);
 
-    // 2️⃣ Points (black diamonds, clickable)
+    // ===== POINTS (REAL DIAMONDS) =====
     L.geoJSON(data, {
-   // POINT / DIAMOND LAYER
-L.geoJSON(data, {
-  filter: f => f.properties.kind === 'point',
-  pointToLayer: (feature, latlng) => {
-    const diamondSVG = `
-      <svg width="28" height="28" viewBox="0 0 24 24">
-        <polygon
-          points="12,0 24,12 12,24 0,12"
-          fill="black"
-          stroke="white"
-          stroke-width="2"
-        />
-      </svg>
-    `;
+      filter: feature => feature.properties.kind === 'point',
+      pointToLayer: (feature, latlng) => {
 
-    return L.marker(latlng, {
-      icon: L.divIcon({
-        html: diamondSVG,
-        className: '',
-        iconSize: [28, 28],
-        iconAnchor: [14, 14]
-      })
-    });
-  },
-  onEachFeature: (feature, layer) => {
-    layer.bindPopup(
-      `<strong>${feature.properties.language}</strong><br>${feature.properties.description || ''}`
-    );
-  }
-}).addTo(map);
-          });
-        }
+        const diamondSVG = `
+          <svg width="28" height="28" viewBox="0 0 24 24">
+            <polygon
+              points="12,0 24,12 12,24 0,12"
+              fill="black"
+              stroke="white"
+              stroke-width="2"
+            />
+          </svg>
+        `;
+
+        return L.marker(latlng, {
+          icon: L.divIcon({
+            html: diamondSVG,
+            className: '',
+            iconSize: [28, 28],
+            iconAnchor: [14, 14]
+          })
+        });
       },
       onEachFeature: (feature, layer) => {
-        if (feature.properties.kind === 'point') {
-          layer.bindPopup(
-            `<strong>${feature.properties.language}</strong><br>${feature.properties.description || feature.properties.family}`
-          );
-        }
-      },
-      filter: feature => feature.properties.kind === 'point'
+        layer.bindPopup(
+          `<strong>${feature.properties.language}</strong><br>${feature.properties.description || ''}`
+        );
+      }
     }).addTo(map);
-  });
+
+  })
+  .catch(err => console.error(err));
