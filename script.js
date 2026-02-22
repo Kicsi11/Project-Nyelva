@@ -20,8 +20,8 @@ fetch('data/languages.geojson')
     L.geoJSON(data, {
       filter: feature => feature.properties.kind === 'area',
       style: feature => ({
-        color: '#444',
-        weight: 2,
+        color: '#666',
+        weight: 0.8,
         fillColor: feature.properties.color || '#ccc',
         fillOpacity: 0.5
       })
