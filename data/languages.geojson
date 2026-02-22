@@ -165,7 +165,7 @@
     "type": "MultiPolygon",
     "coordinates": [
 
-      // Donegal Gaeltacht
+     
       [
         [
           [-8.2, 55.2],
@@ -179,7 +179,7 @@
         ]
       ],
 
-      // Mayo (Achill/Murrisk) Gaeltacht
+    
       [
         [
           [-10.1, 54.21],
@@ -192,7 +192,7 @@
         ]
       ],
 
-      // Galway Gaeltacht
+    
       [
         [
           [-10.23, 53.48],
@@ -206,7 +206,7 @@
         ]
       ],
 
-      // Kerry Gaeltacht (Dingle Peninsula + small areas)
+     
       [
         [
           [-10.37, 52.21],
@@ -226,7 +226,7 @@
         ]
       ],
 
-      // Cork Gaeltacht (West Cork)
+      
       [
         [
           [-9.82, 51.83],
@@ -239,7 +239,7 @@
         ]
       ],
 
-      // Ring / Waterford Gaeltacht
+      
       [
         [
           [-6.9, 52.22],
@@ -250,7 +250,7 @@
         ]
       ],
 
-      // Other small eastern Gaeltacht pockets
+      
       [
         [
           [-6.95, 52.05],
