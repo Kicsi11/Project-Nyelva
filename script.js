@@ -17,21 +17,27 @@ fetch('data/languages.geojson')
   .then(data => {
 
     // ===== AREAS =====
+    const areaLayersByLanguage = {};
+
     L.geoJSON(data, {
-      filter: feature => feature.properties.kind === 'area',
+      filter: f => f.properties.kind === 'area',
       style: feature => ({
         color: '#666',
         weight: 0.8,
         fillColor: feature.properties.color || '#ccc',
         fillOpacity: 0.5
-      })
+      }),
+      onEachFeature: (feature, layer) => {
+        const lang = feature.properties.language;
+        if (!areaLayersByLanguage[lang]) areaLayersByLanguage[lang] = [];
+        areaLayersByLanguage[lang].push(layer);
+      }
     }).addTo(map);
 
     // ===== POINTS (REAL DIAMONDS) =====
     L.geoJSON(data, {
-      filter: feature => feature.properties.kind === 'point',
+      filter: f => f.properties.kind === 'point',
       pointToLayer: (feature, latlng) => {
-
         const diamondSVG = `
           <svg width="18" height="18" viewBox="0 0 24 24">
             <polygon
@@ -42,7 +48,6 @@ fetch('data/languages.geojson')
             />
           </svg>
         `;
-
         return L.marker(latlng, {
           icon: L.divIcon({
             html: diamondSVG,
@@ -53,11 +58,34 @@ fetch('data/languages.geojson')
         });
       },
       onEachFeature: (feature, layer) => {
+        const lang = feature.properties.language;
+
+        layer.on('click', e => {
+          L.DomEvent.stopPropagation(e); // prevent map click from firing
+
+          // Reset all areas
+          Object.values(areaLayersByLanguage).flat().forEach(l =>
+            l.setStyle({ fillOpacity: 0.5, color: '#666' })
+          );
+
+          // Highlight only this language
+          (areaLayersByLanguage[lang] || []).forEach(l =>
+            l.setStyle({ fillOpacity: 0.8, color: '#333' })
+          );
+        });
+
         layer.bindPopup(
-          `<strong>${feature.properties.language}</strong><br>${feature.properties.description || ''}`
+          `<strong>${lang}</strong><br>${feature.properties.description || ''}`
         );
       }
     }).addTo(map);
+
+    // ===== CLICK MAP TO RESET =====
+    map.on('click', () => {
+      Object.values(areaLayersByLanguage).flat().forEach(l =>
+        l.setStyle({ fillOpacity: 0.5, color: '#666' })
+      );
+    });
 
   })
   .catch(err => console.error(err));
