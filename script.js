@@ -23,7 +23,7 @@ const introPopup = L.popup({
   .setContent(`
     <div style="text-align:center;">
       <h2>🌍 Welcome to Project Nyelva! 🌍</h2>
-      <p>Discover which languages are dominantly spoken in every corner of the world! Click on diamonds to explore the regions of where languages/dialects are spoken. So far we have 1 languages.</p>
+      <p>Discover which languages are dominantly spoken in every corner of the world! Click on diamonds to explore languages/dialects and which regions speak them (dominantly). So far we have 1 languages.</p>
       <p><em>Zoom in and pan the map to start exploring!</em></p>
     </div>
   `)
