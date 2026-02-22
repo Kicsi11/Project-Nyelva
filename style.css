@@ -1,9 +1,46 @@
+/* Full page map */
 html, body {
   height: 100%;
   margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
 }
 
 #map {
   width: 100%;
   height: 100%;
+}
+
+/* Diamond markers */
+.diamond-marker {
+  width: 18px;
+  height: 18px;
+  background: black;
+  transform: rotate(45deg);
+  border: 2px solid white;
+}
+
+/* Intro popup styling */
+.intro-popup .leaflet-popup-content-wrapper {
+  background: linear-gradient(135deg, #fffae3, #fff5cc);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.intro-popup .leaflet-popup-tip {
+  background: #fff5cc;
+}
+
+.intro-popup h2 {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.intro-popup p {
+  margin: 5px 0;
 }
