@@ -1,76 +1,54 @@
+// Set map bounds
+const bounds = [[-90, -180], [90, 180]];
+const map = L.map('map', {
+  maxBounds: bounds,
+  maxBoundsViscosity: 1.0,
+  minZoom: 2
+}).setView([20, 0], 2);
+
+// Add base tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19
+}).addTo(map);
+
+// Load GeoJSON
 fetch('data/languages.geojson')
   .then(res => res.json())
   .then(data => {
 
-    let areaLayers = [];
-
-    // ===== AREA LAYER =====
-    const areaLayer = L.geoJSON(data, {
-      filter: f => f.properties.kind === 'area',
-      style: f => ({
-        color: '#555',
-        weight: 2,
-        fillColor: f.properties.color,
-        fillOpacity: 0.6
-      }),
-      onEachFeature: (feature, layer) => {
-        areaLayers.push(layer);
-        layer.language = feature.properties.language;
-      }
+    // 1️⃣ Areas (non-clickable)
+    L.geoJSON(data, {
+      style: feature => {
+        if (feature.properties.kind === 'area') {
+          return {
+            color: '#444',
+            weight: 2,
+            fillOpacity: 0.5
+          };
+        }
+      },
+      filter: feature => feature.properties.kind === 'area'
     }).addTo(map);
 
-    // ===== POINT / DIAMOND LAYER =====
-    const pointLayer = L.geoJSON(data, {
-      filter: f => f.properties.kind === 'point',
+    // 2️⃣ Points (black diamonds, clickable)
+    L.geoJSON(data, {
       pointToLayer: (feature, latlng) => {
-        return L.marker(latlng, {
-          icon: L.divIcon({
-            className: 'diamond-marker',
-            iconSize: [28, 28],
-            iconAnchor: [14, 14]
-          })
-        });
+        if (feature.properties.kind === 'point') {
+          return L.marker(latlng, {
+            icon: L.divIcon({
+              className: 'diamond-marker',
+              iconSize: [20, 20]
+            })
+          });
+        }
       },
       onEachFeature: (feature, layer) => {
-
-        layer.bindPopup(
-          `<strong>${feature.properties.language}</strong><br>
-           ${feature.properties.description || feature.properties.family}`
-        );
-
-        layer.on('click', () => {
-          // reset all areas
-          areaLayers.forEach(l => {
-            l.setStyle({
-              color: '#555',
-              weight: 2,
-              fillOpacity: 0.6
-            });
-          });
-
-          // highlight matching area
-          areaLayers.forEach(l => {
-            if (l.language === feature.properties.language) {
-              l.setStyle({
-                color: '#000',
-                weight: 4,
-                fillOpacity: 0.85
-              });
-            }
-          });
-        });
-      }
+        if (feature.properties.kind === 'point') {
+          layer.bindPopup(
+            `<strong>${feature.properties.language}</strong><br>${feature.properties.description || feature.properties.family}`
+          );
+        }
+      },
+      filter: feature => feature.properties.kind === 'point'
     }).addTo(map);
-
-    // Optional: click map to reset highlight
-    map.on('click', () => {
-      areaLayers.forEach(l => {
-        l.setStyle({
-          color: '#555',
-          weight: 2,
-          fillOpacity: 0.6
-        });
-      });
-    });
-
   });
