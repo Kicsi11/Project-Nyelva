@@ -3,31 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "properties": { "language": "Spanish", "family": "Romance" },
-      "geometry": { "type": "Point", "coordinates": [-3.7038, 40.4168] }
-    },
-    {
-      "type": "Feature",
-      "properties": { "language": "Mandarin Chinese", "family": "Sino-Tibetan" },
-      "geometry": { "type": "Point", "coordinates": [116.4074, 39.9042] }
-    },
-    {
-      "type": "Feature",
-      "properties": { "language": "Arabic", "family": "Semitic" },
-      "geometry": { "type": "Point", "coordinates": [31.2357, 30.0444] }
-    },
-    {
-      "type": "Feature",
-      "properties": { "language": "Swahili", "family": "Bantu" },
-      "geometry": { "type": "Point", "coordinates": [39.2083, -6.7924] }
-    },
-    {
-      "type": "Feature",
-      "properties": { "language": "English", "family": "Germanic" },
-      "geometry": { "type": "Point", "coordinates": [-0.1276, 51.5074] }
-    },
-    {
-      "type": "Feature",
       "properties": {
         "language": "Papiamento",
         "family": "Creole",
