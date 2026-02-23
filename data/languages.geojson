@@ -154,13 +154,17 @@
       }
     },
 
+   {
+  "type": "FeatureCollection",
+  "features": [
     {
       "type": "Feature",
       "properties": {
         "language": "Irish Gaelic",
         "family": "Celtic",
         "kind": "area",
-        "color": "#2e8b57"
+        "color": "#2e8b57",
+        "description": "Gaeltacht and Gaelic-speaking regions"
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -214,7 +218,6 @@
               [-10.167087049821191, 52.235262739319666]
             ]
           ]
-      
         ]
       }
     },
@@ -224,7 +227,7 @@
         "language": "Irish Gaelic",
         "family": "Celtic",
         "kind": "point",
-        "description": "Gaeltacht region"
+        "description": "Representative Gaeltacht region"
       },
       "geometry": {
         "type": "Point",
