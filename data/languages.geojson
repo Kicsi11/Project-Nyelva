@@ -26,6 +26,19 @@
         "type": "Point",
         "coordinates": [-7.7, 53.0]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "language": "Manx",
+        "family": "Celtic language",
+        "kind": "point",
+        "description": "Celtic language"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.548, 54.236]
+      }
     }
   ]
 }
