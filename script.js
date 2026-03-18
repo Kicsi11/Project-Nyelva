@@ -23,7 +23,7 @@ const introPopup = L.popup({
   .setContent(`
     <div style="text-align:center;">
       <h2>🌍 Welcome to Project Nyelva! 🌍</h2>
-      <p>Discover which languages are spoken in every corner of the world! Click on diamonds to explore languages spoken and note that some languages that have wide use will only show the main country (ex. English being in England and Spanish being in Spain). So far we have 3 languages.</p>
+      <p>Discover which languages are spoken in every corner of the world! Click on diamonds to explore languages spoken and note that some languages that have wide use will only show the main country (ex. English being in England and Spanish being in Spain). So far we have 4 languages.</p>
       <p><em>Zoom in and pan the map to start exploring!</em></p>
     </div>
   `)
