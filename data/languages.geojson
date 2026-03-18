@@ -17,14 +17,14 @@
     {
       "type": "Feature",
       "properties": {
-        "language": "English",
-        "family": "Germanic",
+        "language": "Irish Gaelic (Gaeilge)",
+        "family": "Celtic language",
         "kind": "point",
-        "description": "Representative English region"
+        "description": "Celtic language"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-7.0, 53.0]
+        "coordinates": [-8.2439, 53.4129]
       }
     }
   ]
