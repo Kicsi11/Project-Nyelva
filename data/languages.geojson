@@ -30,6 +30,19 @@
     {
       "type": "Feature",
       "properties": {
+        "language": "English",
+        "family": "Germanic",
+        "kind": "point",
+        "description": "Germanic language"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-1.5, 52.5]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Manx (Gaelg)",
         "family": "Celtic language",
         "kind": "point",
