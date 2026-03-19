@@ -14,7 +14,33 @@
         "coordinates": [-68.985, 12.270]
       }
     },
-    {
+   {
+      "type": "Feature",
+      "properties": {
+        "language": "Welsh (Cymru)",
+        "family": "Celtic language",
+        "kind": "point",
+        "description": "Celtic language"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.8, 52.5]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
+        "language": "Scottish Gaelic (Gàidhlig)",
+        "family": "Celtic language",
+        "kind": "point",
+        "description": "Celtic language"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-6.8, 57.2]
+      }
+    },
+{
       "type": "Feature",
       "properties": {
         "language": "Irish Gaelic (Gaeilge)",
