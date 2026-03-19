@@ -35,9 +35,6 @@
         "kind": "point",
         "description": "Germanic language"
       },
-{
-  "type": "FeatureCollection",
-  "features": [
     {
       "type": "Feature",
       "properties": {
