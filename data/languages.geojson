@@ -27,7 +27,20 @@
         "coordinates": [-7.7, 53.0]
       }
     },
-    {
+  {
+      "type": "Feature",
+      "properties": {
+        "language": "Cornish (Kernewek)",
+        "family": "Celtic language",
+        "kind": "point",
+        "description": "Celtic language"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.8, 50.5]
+      }
+    },
+{
       "type": "Feature",
       "properties": {
         "language": "English",
