@@ -14,7 +14,20 @@
         "coordinates": [-68.985, 12.270]
       }
     },
-   {
+    {
+      "type": "Feature",
+      "properties": {
+        "language": "Hungarian (Magyar)",
+        "family": "Uralic language",
+        "kind": "point",
+        "description": "Uralic language"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [19.5033, 47.1625]
+      }
+    },
+{
       "type": "Feature",
       "properties": {
         "language": "Welsh (Cymru)",
