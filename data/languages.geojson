@@ -46,11 +46,11 @@
         "language": "Scots",
         "family": "Germanic language",
         "kind": "point",
-        "description": "Germanic language in Lowlands Scotland"
+        "description": "Germanic language"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-3.5, 55.8]
+        "coordinates": [-3.5, 55.5]
       }
     },
     {
