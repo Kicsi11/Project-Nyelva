@@ -43,6 +43,19 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Ainu",
+        "family": "Isolate",
+        "kind": "point",
+        "description": "Isolate language"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [142.5, 43.5]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "English",
         "family": "Germanic",
         "kind": "point",
