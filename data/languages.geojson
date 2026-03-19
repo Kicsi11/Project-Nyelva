@@ -35,6 +35,22 @@
         "kind": "point",
         "description": "Germanic language"
       },
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "language": "Scots",
+        "family": "Germanic language",
+        "kind": "point",
+        "description": "Germanic language"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.5, 55.8]
+      }
+    },
       "geometry": {
         "type": "Point",
         "coordinates": [-0.8, 52.0]
