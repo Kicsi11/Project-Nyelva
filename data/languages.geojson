@@ -17,6 +17,19 @@
   {
       "type": "Feature",
       "properties": {
+        "language": "Karelian (Karjala)",
+        "family": "Uralic language",
+        "kind": "point",
+        "description": "Uralic language"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [33.0, 62.0]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Sicilian (Sicilianu)",
         "family": "Romance language",
         "kind": "point",
