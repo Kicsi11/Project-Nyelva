@@ -14,7 +14,20 @@
         "coordinates": [-68.985, 12.270]
       }
     },
-    {
+  {
+      "type": "Feature",
+      "properties": {
+        "language": "Sicilian (Sicilianu)",
+        "family": "Romance language",
+        "kind": "point",
+        "description": "Romance language"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [14.0, 37.6]
+      }
+    },
+{
       "type": "Feature",
       "properties": {
         "language": "Hungarian (Magyar)",
