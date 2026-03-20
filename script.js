@@ -24,7 +24,7 @@ const introPopup = L.popup({
     <div style="text-align:center;">
       <h2>🌍 Welcome to Project Nyelva! 🌍</h2>
       <p>Discover which languages are spoken in every corner of the world! Click on diamonds to explore languages spoken and note that some languages that have wide use will only show the main country (ex. English being in England and Spanish being in Spain). So far we have 13 languages.</p>
-      <p><em>Zoom in and pan the map to start exploring! Note: The division between being a language is a mix of linguistic, social and political.</em></p>
+      <p><em>Zoom in and pan the map to start exploring! Note: The division between being a language or a dialect is based from a mix of linguistic, social and political views.</em></p>
     </div>
   `)
   .openOn(map);
