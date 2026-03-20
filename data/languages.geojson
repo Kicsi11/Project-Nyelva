@@ -30,6 +30,19 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Turkish (Türkçe)",
+        "family": "Turkic language",
+        "kind": "point",
+        "description": "Turkic language"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [35.0, 39.0]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Hungarian (Magyar)",
         "family": "Uralic language",
         "kind": "point",
