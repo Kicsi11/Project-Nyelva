@@ -17,6 +17,19 @@
   {
       "type": "Feature",
       "properties": {
+        "language": "Bashkir (башҡортса)",
+        "family": "Turkic language",
+        "kind": "point",
+        "description": "Ancestry: Kipchak, Turkic language<br>L1 Speakers: ~1.5 Million<br>Script: Cyrillic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [57.240817, 53.422629]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Purépecha (Pʼurhépecha)",
         "family": "Isolate language",
         "kind": "point",
