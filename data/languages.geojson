@@ -27,6 +27,19 @@
         "coordinates": [33.0, 62.5]
       }
     },
+ {
+      "type": "Feature",
+      "properties": {
+        "language": "Breton (Brezhoneg)",
+        "family": "Celtic language",
+        "kind": "point",
+        "description": "Ancestry: Brittonic, Celtic language<br>L1 Speakers: ~150k<br>Script: Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [48.133376, -2.703294]
+      }
+    },
 {
       "type": "Feature",
       "properties": {
