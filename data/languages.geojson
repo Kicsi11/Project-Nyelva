@@ -7,7 +7,7 @@
         "language": "Papiamento",
         "family": "Creole",
         "kind": "point",
-        "description": "Creole language"
+        "description": "Ancestry: Portuguese-based Creole language<br>L1 Speakers: ~350k<br>Script: Latin"
       },
       "geometry": {
         "type": "Point",
@@ -20,7 +20,7 @@
         "language": "Karelian (Karjala)",
         "family": "Uralic language",
         "kind": "point",
-        "description": "Uralic language"
+        "description": "Ancestry: Finnic, Uralic language<br>L1 Speakers: ~20k-35k<br>Script: Latin"
       },
       "geometry": {
         "type": "Point",
@@ -33,7 +33,7 @@
         "language": "Sicilian (Sicilianu)",
         "family": "Romance language",
         "kind": "point",
-        "description": "Romance language"
+        "description": "Ancestry: Italo-Dalmatian, Romance language<br>L1 Speakers: ~5 Million<br>Script: Latin"
       },
       "geometry": {
         "type": "Point",
@@ -46,7 +46,7 @@
         "language": "Turkish (Türkçe)",
         "family": "Turkic language",
         "kind": "point",
-        "description": "Turkic language"
+        "description": "Ancestry: Oghuz, Turkic language<br>L1 Speakers: ~85 Million<br>Script: Latin"
       },
       "geometry": {
         "type": "Point",
@@ -72,7 +72,7 @@
         "language": "Welsh (Cymru)",
         "family": "Celtic language",
         "kind": "point",
-        "description": "Celtic language"
+        "description": "Ancestry: Brittonic, Celtic language<br>L1 Speakers: ~538k<br>Script: Latin"
       },
       "geometry": {
         "type": "Point",
@@ -85,7 +85,7 @@
         "language": "Scottish Gaelic (Gàidhlig)",
         "family": "Celtic language",
         "kind": "point",
-        "description": "Celtic language"
+        "description": "Ancestry: Goidelic, Celtic language<br>L1 Speakers: ~60k<br>Script: Latin"
       },
       "geometry": {
         "type": "Point",
@@ -98,7 +98,7 @@
         "language": "Irish Gaelic (Gaeilge)",
         "family": "Celtic language",
         "kind": "point",
-        "description": "Celtic language"
+        "description": "Ancestry: Goidelic, Celtic language<br>L1 Speakers: ~75k<br>Script: Latin"
       },
       "geometry": {
         "type": "Point",
@@ -111,7 +111,7 @@
         "language": "Cornish (Kernewek)",
         "family": "Celtic language",
         "kind": "point",
-        "description": "Celtic language"
+        "description": "Ancestry: Brittonic, Celtic language<br>L1 Speakers: ~400<br>Script: Latin"
       },
       "geometry": {
         "type": "Point",
@@ -124,7 +124,7 @@
         "language": "Ainu (アイヌ)",
         "family": "Isolate",
         "kind": "point",
-        "description": "Isolate language"
+        "description": "Ancestry: Isolate language<br>L1 Speakers: ~0<br>Script: Latin"
       },
       "geometry": {
         "type": "Point",
@@ -137,7 +137,7 @@
         "language": "English",
         "family": "Germanic",
         "kind": "point",
-        "description": "Germanic language"
+        "description": "Ancestry: Anglo-Frisian, Germanic language<br>L1 Speakers: ~375 Million<br>Script: Latin"
       },
       "geometry": {
         "type": "Point",
@@ -150,7 +150,7 @@
         "language": "Scots",
         "family": "Germanic language",
         "kind": "point",
-        "description": "Germanic language"
+        "description": "Ancestry: Anglo-Frisian, Germanic language<br>L1 Speakers: ~1.5 Million<br>Script: Latin"
       },
       "geometry": {
         "type": "Point",
@@ -163,7 +163,7 @@
         "language": "Manx (Gaelg)",
         "family": "Celtic language",
         "kind": "point",
-        "description": "Celtic language"
+        "description": "Ancestry: Goidelic, Celtic language<br>L1 Speakers: ~0<br>Script: Latin"
       },
       "geometry": {
         "type": "Point",
