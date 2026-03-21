@@ -17,6 +17,19 @@
   {
       "type": "Feature",
       "properties": {
+        "language": "Purépecha (Pʼurhépecha)",
+        "family": "Isolate language",
+        "kind": "point",
+        "description": "Ancestry: Isolate language<br>L1 Speakers: ~140k<br>Script: Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-101.872833, 19.770322]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Karelian (Karjala)",
         "family": "Uralic language",
         "kind": "point",
