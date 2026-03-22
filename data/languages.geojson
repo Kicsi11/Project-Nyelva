@@ -1,7 +1,20 @@
 {
   "type": "FeatureCollection",
   "features": [
-    {
+ {
+      "type": "Feature",
+      "properties": {
+        "language": "Basque (euskara)",
+        "family": "Isolate language",
+        "kind": "point",
+        "description": "Ancestry: Isolate language<br>L1 Speakers: ~760k<br>Script: Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-2.472694, 42.947778]
+      }
+    },   
+{
       "type": "Feature",
       "properties": {
         "language": "Papiamento",
