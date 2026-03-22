@@ -17,6 +17,19 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Kashubian (kaszëbsczi)",
+        "family": "Slavic language",
+        "kind": "point",
+        "description": "Ancestry: Lechitic, Slavic language<br>L1 Speakers: ~87k<br>Script: Cyrillic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.200513, 54.331485]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Russian (русский)",
         "family": "Slavic language",
         "kind": "point",
