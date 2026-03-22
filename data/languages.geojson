@@ -13,8 +13,21 @@
         "type": "Point",
         "coordinates": [-68.985, 12.270]
       }
+    },     
+{
+      "type": "Feature",
+      "properties": {
+        "language": "Russian (русский)",
+        "family": "Slavic language",
+        "kind": "point",
+        "description": "Ancestry: East Slavic, Slavic language<br>L1 Speakers: ~145 Million<br>Script: Cyrillic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [37.609983, 55.720613]
+      }
     },
-      {
+{
       "type": "Feature",
       "properties": {
         "language": "Catalan (català)",
