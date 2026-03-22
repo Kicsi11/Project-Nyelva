@@ -17,6 +17,19 @@
    {
       "type": "Feature",
       "properties": {
+        "language": "Nahuatl (depends on dialect)",
+        "family": "Uto-Aztecan language",
+        "kind": "point",
+        "description": "Ancestry: Southern Uto-Aztecan, Uto-Aztecan language<br>L1 Speakers: ~1.7 Million<br>Script: Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-98.055754, 19.100534]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Igbo (Ígbò)",
         "family": "Niger-Congo language",
         "kind": "point",
