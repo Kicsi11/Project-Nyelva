@@ -17,6 +17,19 @@
    {
       "type": "Feature",
       "properties": {
+        "language": "Cherokee (ᏣᎳᎩ)",
+        "family": "Iroquoian language",
+        "kind": "point",
+        "description": "Ancestry: Iroquoian language<br>L1 Speakers: ~2k<br>Script: Cherokee syllabary"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-94.998142, 36.184442]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Navajo (Diné bizaad)",
         "family": "Na-Dené language",
         "kind": "point",
