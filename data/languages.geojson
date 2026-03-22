@@ -14,7 +14,20 @@
         "coordinates": [-68.985, 12.270]
       }
     },
-   {
+    {
+      "type": "Feature",
+      "properties": {
+        "language": "Norwegian (norsk)",
+        "family": "Germanic language",
+        "kind": "point",
+        "description": "Ancestry: Nordic, Germanic language<br>L1 Speakers: ~4.5 Million<br>Script: Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [8.698342, 59.862470]
+      }
+    },
+{
       "type": "Feature",
       "properties": {
         "language": "Swedish (svenska)",
