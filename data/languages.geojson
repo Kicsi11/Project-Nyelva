@@ -17,6 +17,19 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Kurdish (Kurdî/کوردی)",
+        "family": "Iranian language",
+        "kind": "point",
+        "description": "Ancestry: Western Iranian, Iranian language<br>L1 Speakers: ~29 Million<br>Script: Cyrillic/Arabic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [44.266522, 37.443681]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Kyrgyz (Кыргыз)",
         "family": "Turkic language",
         "kind": "point",
