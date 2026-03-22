@@ -17,6 +17,19 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Persian/Farsi (فارسی)",
+        "family": "Iranian language",
+        "kind": "point",
+        "description": "Ancestry: Western Iranian, Iranian language<br>L1 Speakers: ~91 Million<br>Script: Arabic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [55.884017, 32.755866]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Hindi (हिन्दी)",
         "family": "Indo-Aryan language",
         "kind": "point",
