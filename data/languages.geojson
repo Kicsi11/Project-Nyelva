@@ -17,6 +17,19 @@
    {
       "type": "Feature",
       "properties": {
+        "language": "Igbo (Ígbò)",
+        "family": "Niger-Congo language",
+        "kind": "point",
+        "description": "Ancestry: Volta-Niger, Niger-Congo language<br>L1 Speakers: ~34 Million<br>Script: Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [8.165627, 5.139091]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Cherokee (ᏣᎳᎩ)",
         "family": "Iroquoian language",
         "kind": "point",
