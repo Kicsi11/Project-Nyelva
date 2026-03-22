@@ -17,6 +17,19 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Yakut (саха)",
+        "family": "Turkic language",
+        "kind": "point",
+        "description": "Ancestry: Siberian Turkic, Turkic language<br>L1 Speakers: ~450k<br>Script: Cyrillic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [133.663673, 67.471555]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "West Frisian (Frysk)",
         "family": "Germanic language",
         "kind": "point",
