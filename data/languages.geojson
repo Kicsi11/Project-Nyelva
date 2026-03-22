@@ -17,6 +17,19 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Afrikaans",
+        "family": "Germanic language",
+        "kind": "point",
+        "description": "Ancestry: West Germanic, Germanic language<br>L1 Speakers: ~7.2 Million<br>Script: Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [20.354375, -31.645900]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Low German (Plattdütsch)",
         "family": "Germanic language",
         "kind": "point",
