@@ -17,6 +17,19 @@
    {
       "type": "Feature",
       "properties": {
+        "language": "Danish (dansk)",
+        "family": "Germanic language",
+        "kind": "point",
+        "description": "Ancestry: Nordic, Germanic language<br>L1 Speakers: ~5.7 Million<br>Script: Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [10.596545, 55.807620]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Nahuatl (depends on dialect)",
         "family": "Uto-Aztecan language",
         "kind": "point",
