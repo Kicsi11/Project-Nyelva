@@ -17,6 +17,32 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Hindi (हिन्दी)",
+        "family": "Indo-Aryan language",
+        "kind": "point",
+        "description": "Ancestry: Central Aryan, Indo-Aryan language<br>L1 Speakers: ~345 Million<br>Script: Devanagari"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [77.864874, 25.934335]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
+        "language": "Urdu (اردو)",
+        "family": "Indo-Aryan language",
+        "kind": "point",
+        "description": "Ancestry: Central Aryan, Indo-Aryan language<br>L1 Speakers: ~78 Million<br>Script: Arabic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [67.052895, 24.873978]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Kurdish (Kurdî/کوردی)",
         "family": "Iranian language",
         "kind": "point",
