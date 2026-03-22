@@ -70,8 +70,8 @@ fetch('data/languages.geojson')
           icon: L.divIcon({
             html: diamondSVG,
             className: '',
-            iconSize: [18, 18],
-            iconAnchor: [9, 9]
+            iconSize: [12, 12],
+            iconAnchor: [6, 6]
           })
         });
       },
