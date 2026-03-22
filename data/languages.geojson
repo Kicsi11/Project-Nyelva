@@ -14,7 +14,20 @@
         "coordinates": [-68.985, 12.270]
       }
     },
-    {
+      {
+      "type": "Feature",
+      "properties": {
+        "language": "Catalan (català)",
+        "family": "Romance language",
+        "kind": "point",
+        "description": "Ancestry: Gallo-Romance, Romance language<br>L1 Speakers: ~4.1 Million<br>Script: Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [1.355638, 41.525852]
+      }
+    },
+{
       "type": "Feature",
       "properties": {
         "language": "Norwegian (norsk)",
