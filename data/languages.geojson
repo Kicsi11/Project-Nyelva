@@ -17,6 +17,19 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Saterland/East Frisian (Fräisk)",
+        "family": "Germanic language",
+        "kind": "point",
+        "description": "Ancestry: Anglo-Frisian, Germanic language<br>L1 Speakers: ~2k<br>Script: Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.737142, 53.043504]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Kashubian (kaszëbsczi)",
         "family": "Slavic language",
         "kind": "point",
