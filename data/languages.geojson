@@ -17,6 +17,19 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Croatian (hrvatski)",
+        "family": "Slavic language",
+        "kind": "point",
+        "description": "Ancestry: South Slavic, Slavic language<br>L1 Speakers: ~5.1 Million<br>Script: Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [16.459798, 45.599819]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Papiamento",
         "family": "Creole",
         "kind": "point",
