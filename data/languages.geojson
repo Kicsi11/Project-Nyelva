@@ -14,7 +14,20 @@
         "coordinates": [-68.985, 12.270]
       }
     },
-  {
+   {
+      "type": "Feature",
+      "properties": {
+        "language": "Navajo (Diné bizaad)",
+        "family": "Na-Dené language",
+        "kind": "point",
+        "description": "Ancestry: Southern Athabaskan, Na-Dené language<br>L1 Speakers: ~170k<br>Script: Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-109.343138, 36.652557]
+      }
+    },
+{
       "type": "Feature",
       "properties": {
         "language": "Bashkir (башҡортса)",
