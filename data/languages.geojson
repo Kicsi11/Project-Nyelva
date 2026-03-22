@@ -17,6 +17,32 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "West Frisian (Frysk)",
+        "family": "Germanic language",
+        "kind": "point",
+        "description": "Ancestry: Anglo-Frisian, Germanic language<br>L1 Speakers: ~470k<br>Script: Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.814052, 53.134164]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
+        "language": "North Frisian (Frasch, Freesk, Friesk or Friisk)",
+        "family": "Germanic language",
+        "kind": "point",
+        "description": "Ancestry: Anglo-Frisian, Germanic language<br>L1 Speakers: ~10k<br>Script: Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [8.842137, 54.605284]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Saterland/East Frisian (Fräisk)",
         "family": "Germanic language",
         "kind": "point",
