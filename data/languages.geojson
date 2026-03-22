@@ -17,6 +17,19 @@
    {
       "type": "Feature",
       "properties": {
+        "language": "Swedish (svenska)",
+        "family": "Germanic language",
+        "kind": "point",
+        "description": "Ancestry: Nordic, Germanic language<br>L1 Speakers: ~10 Million<br>Script: Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [15.2422542, 59.419374]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Danish (dansk)",
         "family": "Germanic language",
         "kind": "point",
@@ -24,7 +37,7 @@
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [10.596545, 55.807620]
+        "coordinates": [10.341542, 55.555360]
       }
     },
 {
