@@ -17,6 +17,19 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Kazakh (hrvatski)",
+        "family": "Turkic language",
+        "kind": "point",
+        "description": "Ancestry: Kipchak, Turkic language<br>L1 Speakers: ~16.5 Million<br>Script: Cyrillic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [67.793526, 47.901613]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Croatian (hrvatski)",
         "family": "Slavic language",
         "kind": "point",
