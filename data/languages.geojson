@@ -17,6 +17,32 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Mongolian (Монгол)",
+        "family": "Mongolic language",
+        "kind": "point",
+        "description": "Ancestry: Central Mongolic, Mongolic language<br>L1 Speakers: ~5.4 Million<br>Script: Cyrillic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.935403, 47.059645]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
+        "language": "Buryat (Буряад)",
+        "family": "Mongolic language",
+        "kind": "point",
+        "description": "Ancestry: Central Mongolic, Mongolic language<br>L1 Speakers: ~290k<br>Script: Cyrillic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [105.817018, 51.208948]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Persian/Farsi (فارسی)",
         "family": "Iranian language",
         "kind": "point",
