@@ -17,6 +17,19 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Tigrinya (ትግርኛ)",
+        "family": "Semitic language",
+        "kind": "point",
+        "description": "Ancestry: Ethiopic, Semitic language<br>L1 Speakers: ~9.9 Million<br>Script: Ge'ez"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [38.923397, 13.552016]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Itelmen (итэнмэн)",
         "family": "Chukotko-Kamchatkan language",
         "kind": "point",
