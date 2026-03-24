@@ -17,6 +17,19 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Mohawk (Kanienʼkéha)",
+        "family": "Iroquoian language",
+        "kind": "point",
+        "description": "Ancestry: Iroquoian language<br>L1 Speakers: ~3.8k<br>Script: Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.314296, 44.836980]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Afrikaans",
         "family": "Germanic language",
         "kind": "point",
