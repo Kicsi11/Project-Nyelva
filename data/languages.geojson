@@ -17,6 +17,19 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Dzongkha (ትግርኛ)",
+        "family": "Sino-Tibetan language",
+        "kind": "point",
+        "description": "Ancestry: Tibetic, Sino-Tibetan language<br>L1 Speakers: ~171k<br>Script: Tibetan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [89.882713, 27.386645]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Tigrinya (ትግርኛ)",
         "family": "Semitic language",
         "kind": "point",
