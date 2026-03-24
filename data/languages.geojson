@@ -17,6 +17,58 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Southern Ndebele (isiNdebele seSewula)",
+        "family": "Niger-Congo language",
+        "kind": "point",
+        "description": "Ancestry: Nguni, Niger-Congo language<br>L1 Speakers: ~1.1 Million<br>Script: : Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.812553, -25.453193]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
+        "language": "Northern Ndebele (isiNdebele saseNyakatho)",
+        "family": "Niger-Congo language",
+        "kind": "point",
+        "description": "Ancestry: Nguni, Niger-Congo language<br>L1 Speakers: ~2.4 Million<br>Script: : Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.303299, -20.216842]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
+        "language": "Xhosa (isiXhosa)",
+        "family": "Niger-Congo language",
+        "kind": "point",
+        "description": "Ancestry: Nguni, Niger-Congo language<br>L1 Speakers: ~2.6 Million<br>Script: : Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [27.156754, -32.122593]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
+        "language": "Zulu (isiZulu)",
+        "family": "Niger-Congo language",
+        "kind": "point",
+        "description": "Ancestry: Nguni, Niger-Congo language<br>L1 Speakers: ~13 Million<br>Script: : Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [30.869918, -28.837937]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Dzongkha (ትግርኛ)",
         "family": "Sino-Tibetan language",
         "kind": "point",
