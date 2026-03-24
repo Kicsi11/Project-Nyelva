@@ -17,6 +17,19 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Itelmen (итэнмэн)",
+        "family": "Chukotko-Kamchatkan language",
+        "kind": "point",
+        "description": "Ancestry: Kamchatkan, Chukotko-Kamchatkan language<br>L1 Speakers: ~800<br>Script: Cyrillic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [157.476551, 56.186534]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Mohawk (Kanienʼkéha)",
         "family": "Iroquoian language",
         "kind": "point",
