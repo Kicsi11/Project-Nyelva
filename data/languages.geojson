@@ -17,6 +17,19 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Phuthi (Síphùthì)",
+        "family": "Niger-Congo language",
+        "kind": "point",
+        "description": "Ancestry: Nguni, Niger-Congo language<br>L1 Speakers: ~20k<br>Script: : Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [28.060535, -30.549607]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Swazi (siSwati)",
         "family": "Niger-Congo language",
         "kind": "point",
