@@ -17,6 +17,19 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Swazi (siSwati)",
+        "family": "Niger-Congo language",
+        "kind": "point",
+        "description": "Ancestry: Nguni, Niger-Congo language<br>L1 Speakers: ~2.3 Million<br>Script: : Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [31.563474, -26.527476]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Southern Ndebele (isiNdebele seSewula)",
         "family": "Niger-Congo language",
         "kind": "point",
