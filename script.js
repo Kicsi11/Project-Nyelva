@@ -24,7 +24,7 @@ const introPopup = L.popup({
     <div style="text-align:center;">
       <h2>🌍 Welcome to Project Nyelva! 🌍</h2>
       <p>Here is a map for you to explore Earth's languages. Locations are based off the most dominantly spoken part or origin of the language. Also, dialects and languages don't have a clear division so this map isn't 100% accurate (so as almost every language map you see).</p>
-      <p><em>So far there are 52 languages</em></p>
+      <p><em>So far there are 54 languages</em></p>
     </div>
   `)
   .openOn(map);
