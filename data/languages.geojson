@@ -17,6 +17,19 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Tswana (Setswana)",
+        "family": "Niger-Congo language",
+        "kind": "point",
+        "description": "Ancestry: Bantu, Niger-Congo language<br>L1 Speakers: ~5.2 Million<br>Script: : Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [25.607950, -25.921491]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Northern Sotho (Sepedi)",
         "family": "Niger-Congo language",
         "kind": "point",
