@@ -17,6 +17,32 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Northern Sotho (Sepedi)",
+        "family": "Niger-Congo language",
+        "kind": "point",
+        "description": "Ancestry: Bantu, Niger-Congo language<br>L1 Speakers: ~6.2 Million<br>Script: : Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [30.118195, -24.603573]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
+        "language": "Southern Sotho (Sesotho)",
+        "family": "Niger-Congo language",
+        "kind": "point",
+        "description": "Ancestry: Bantu, Niger-Congo language<br>L1 Speakers: ~6 Million<br>Script: : Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [27.815396, -29.212590]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Phuthi (Síphùthì)",
         "family": "Niger-Congo language",
         "kind": "point",
