@@ -17,6 +17,32 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Rusyn (русиньскый язык)",
+        "family": "Slavic language",
+        "kind": "point",
+        "description": "Ancestry: East Slavic, Slavic language<br>L1 Speakers: ~70k<br>Script: : Cyrillic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [22.187206, 49.065949]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
+        "language": "Slovak (Slovenský)",
+        "family": "Slavic language",
+        "kind": "point",
+        "description": "Ancestry: West Slavic, Slavic language<br>L1 Speakers: ~5 Million<br>Script: : Latin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [19.282193, 48.631457]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "TshiVenda (Tshivenḓa)",
         "family": "Niger-Congo language",
         "kind": "point",
