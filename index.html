@@ -2,46 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nyelva Map</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <style>
-    /* This ensures the footer sits on top of the map at the bottom */
+    /* Reset margins and ensure the container bounds everything correctly */
+    html, body { 
+      margin: 0; 
+      padding: 0; 
+      height: 100%; 
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* Wrap map and footer to prevent viewport calculation bugs */
+    .map-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Leaflet map expands to fill the wrapper safely */
+    #map { 
+      height: 100%; 
+      width: 100%; 
+    }
+
+    /* Fixed footer: responsive padding, dynamic safe widths */
     #site-footer {
       position: absolute;
       bottom: 0;
+      left: 0;
       width: 100%;
-      background: rgba(255, 255, 255, 0.8); /* See-through white */
-      z-index: 1000; /* Keeps it above the map */
+      background: rgba(255, 255, 255, 0.9); /* Slightly more opaque for outdoor legibility */
+      z-index: 1000;
       text-align: center;
-      padding: 10px 0;
+      padding: 12px 0;
       font-family: sans-serif;
       font-size: 14px;
+      box-sizing: border-box;
     }
+
     #site-footer a {
       color: #333;
       text-decoration: none;
-      margin: 0 10px;
+      margin: 0 8px;
       font-weight: bold;
+      display: inline-block; /* Prevents wrapping mid-word on narrow mobile landscapes */
     }
+
     #site-footer a:hover {
       text-decoration: underline;
     }
-    /* Ensure map takes up full screen but leaves room for logic */
-    body, html { margin: 0; padding: 0; height: 100%; }
-    #map { height: 100vh; width: 100%; }
+
+    /* Fix layout issues specifically for horizontal mobile screens */
+    @media (orientation: landscape) and (max-height: 500px) {
+      #site-footer {
+        padding: 6px 0; /* Shorter footer to preserve screen space for the map */
+        font-size: 12px;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <div id="map"></div>
+  <!-- Wrapped everything in a container to secure absolute positioning anchors -->
+  <div class="map-container">
+    <div id="map"></div>
 
-  <!-- THE NEW FOOTER SECTION -->
-  <footer id="site-footer">
-    <a href="about.html">About Us</a> | 
-    <a href="contact.html">Contact Us</a> | 
-    <a href="privacy-policy.html">Privacy Policy</a>
-  </footer>
+    <footer id="site-footer">
+      <a href="about.html">About Us</a> | 
+      <a href="contact.html">Contact Us</a> | 
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </footer>
+  </div>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="script.js"></script>
