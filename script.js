@@ -56,11 +56,12 @@ fetch('data/languages.geojson')
     L.geoJSON(data, {
       filter: f => f.properties.kind === 'point',
       pointToLayer: (feature, latlng) => {
-        // Checks for "size": "small" in GeoJSON properties. Defaults to original size.
         const isSmall = feature.properties.size === 'small';
-        const iconSize = isSmall ? [8, 8] : [12, 12];
-        const iconAnchor = isSmall ? [4, 4] : [6, 6];
-        const svgSize = isSmall ? 14 : 18;
+        
+        // Changing iconSize to [6, 6] makes it ultra-small
+        const iconSize = isSmall ? [6, 6] : [12, 12];
+        const iconAnchor = isSmall ? [3, 3] : [6, 6];
+        const svgSize = isSmall ? 10 : 18;
 
         const diamondSVG = `
           <svg width="${svgSize}" height="${svgSize}" viewBox="0 0 24 24">
