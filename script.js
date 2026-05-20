@@ -58,9 +58,10 @@ fetch('data/languages.geojson')
       pointToLayer: (feature, latlng) => {
         const isSmall = feature.properties.size === 'small';
         
-        const iconSize = isSmall ? [6, 6] : [12, 12];
-        const iconAnchor = isSmall ? [3, 3] : [6, 6];
-        const svgSize = isSmall ? 10 : 18;
+        // Micro-adjusted small size dimensions
+        const iconSize = isSmall ? [7, 7] : [12, 12];
+        const iconAnchor = isSmall ? [3.5, 3.5] : [6, 6];
+        const svgSize = isSmall ? 11 : 18;
 
         // Reads 'color' from GeoJSON properties, defaults to 'black' if missing
         const pointColor = feature.properties.color || 'black';
