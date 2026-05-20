@@ -103,8 +103,14 @@ fetch('data/languages.geojson')
           );
         });
 
+        // OPTION 2 INTEGRATION: Fall back to auto-search if custom "wikipedia" property doesn't exist
+        const customUrl = feature.properties.wikipedia || `https://en.wikipedia.org/wiki/${lang.split('(')[0].trim()}_language`;
+        
+        // Build the clickable link markup
+        const wikiLinkHTML = `<br><br><a href="${customUrl}" target="_blank" style="color: #3498db; text-decoration: none; font-weight: bold;">Wikipedia Article →</a>`;
+
         layer.bindPopup(
-          `<strong>${lang}</strong><br>${feature.properties.description || ''}`
+          `<strong>${lang}</strong><br>${feature.properties.description || ''}${wikiLinkHTML}`
         );
       }
     }).addTo(map);
