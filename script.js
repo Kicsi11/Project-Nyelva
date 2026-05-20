@@ -105,7 +105,9 @@ fetch('data/languages.geojson')
 
         // Option 2 Integration: Custom fallback system for Wikipedia links
         const customUrl = feature.properties.wikipedia || `https://en.wikipedia.org/wiki/${lang.split('(')[0].trim()}_language`;
-        const wikiLinkHTML = `<br><br><a href="${customUrl}" target="_blank" style="color: #3498db; text-decoration: none; font-weight: bold;">Wikipedia Article →</a>`;
+        
+        // REPLACED <br><br> GAP: Wrapped link inside a clean div tag with a tight 8px margin
+        const wikiLinkHTML = `<div style="margin-top: 8px;"><a href="${customUrl}" target="_blank" style="color: #3498db; text-decoration: none; font-weight: bold; font-size: 13px;">Wikipedia Article →</a></div>`;
 
         layer.bindPopup(
           `<strong>${lang}</strong><br>${feature.properties.description || ''}${wikiLinkHTML}`
