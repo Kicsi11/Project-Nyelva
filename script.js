@@ -56,14 +56,26 @@ fetch('data/languages.geojson')
     L.geoJSON(data, {
       filter: f => f.properties.kind === 'point',
       pointToLayer: (feature, latlng) => {
-        const isSmall = feature.properties.size === 'small';
+        const sizeProp = feature.properties.size;
         
-        // Micro-adjusted dimensions (Big diamond size reduced by exactly 1)
-        const iconSize = isSmall ? [7, 7] : [11, 11];
-        const iconAnchor = isSmall ? [3.5, 3.5] : [5.5, 5.5];
-        const svgSize = isSmall ? 11 : 17;
+        let iconSize, iconAnchor, svgSize;
 
-        // Reads 'color' from GeoJSON properties, defaults to 'black' if missing
+        // 3-Tier Hierarchy sizes
+        if (sizeProp === 'small') {
+          iconSize = [7, 7];
+          iconAnchor = [3.5, 3.5];
+          svgSize = 11;
+        } else if (sizeProp === 'medium') {
+          iconSize = [9, 9];
+          iconAnchor = [4.5, 4.5];
+          svgSize = 14;
+        } else {
+          // Default Large (Using your precisely adjusted 11x11 scale)
+          iconSize = [11, 11];
+          iconAnchor = [5.5, 5.5];
+          svgSize = 17;
+        }
+
         const pointColor = feature.properties.color || 'black';
 
         const diamondSVG = `
@@ -90,7 +102,7 @@ fetch('data/languages.geojson')
         const lang = feature.properties.language;
 
         layer.on('click', e => {
-          L.DomEvent.stopPropagation(e); // prevent map click from firing
+          L.DomEvent.stopPropagation(e);
 
           // Reset all areas
           Object.values(areaLayersByLanguage).flat().forEach(l =>
@@ -103,10 +115,7 @@ fetch('data/languages.geojson')
           );
         });
 
-        // Option 2 Integration: Custom fallback system for Wikipedia links
         const customUrl = feature.properties.wikipedia || `https://en.wikipedia.org/wiki/${lang.split('(')[0].trim()}_language`;
-        
-        // REPLACED <br><br> GAP: Wrapped link inside a clean div tag with a tight 8px margin
         const wikiLinkHTML = `<div style="margin-top: 8px;"><a href="${customUrl}" target="_blank" style="color: #3498db; text-decoration: none; font-weight: bold; font-size: 13px;">Wikipedia Article →</a></div>`;
 
         layer.bindPopup(
