@@ -11,6 +11,7 @@
         "type_of_lect": "Language",
         "color": "#e74c3c",
         "is_official": false,
+        "kind": "point",
         "wikipedia_link": "https://en.wikipedia.org/wiki/Basque_language"
       },
       "geometry": {
@@ -28,6 +29,7 @@
         "type_of_lect": "Language",
         "color": "#3498db",
         "is_official": false,
+        "kind": "point",
         "wikipedia_link": "https://en.wikipedia.org/wiki/Rusyn_language"
       },
       "geometry": {
@@ -45,6 +47,7 @@
         "type_of_lect": "Language",
         "color": "#3498db",
         "is_official": true,
+        "kind": "point",
         "wikipedia_link": "https://en.wikipedia.org/wiki/Slovak_language"
       },
       "geometry": {
@@ -62,6 +65,7 @@
         "type_of_lect": "Language",
         "color": "#2ecc71",
         "is_official": true,
+        "kind": "point",
         "wikipedia_link": "https://en.wikipedia.org/wiki/Venda_language"
       },
       "geometry": {
