@@ -52,12 +52,18 @@ fetch('data/languages.geojson')
       }
     }).addTo(map);
 
-    // ===== POINTS (REAL DIAMONDS) =====
+    // ===== POINTS (DYNAMIC DIAMONDS) =====
     L.geoJSON(data, {
       filter: f => f.properties.kind === 'point',
       pointToLayer: (feature, latlng) => {
+        // Checks for "size": "small" in GeoJSON properties. Defaults to original size.
+        const isSmall = feature.properties.size === 'small';
+        const iconSize = isSmall ? [8, 8] : [12, 12];
+        const iconAnchor = isSmall ? [4, 4] : [6, 6];
+        const svgSize = isSmall ? 14 : 18;
+
         const diamondSVG = `
-          <svg width="18" height="18" viewBox="0 0 24 24">
+          <svg width="${svgSize}" height="${svgSize}" viewBox="0 0 24 24">
             <polygon
               points="12,0 24,12 12,24 0,12"
               fill="black"
@@ -66,12 +72,13 @@ fetch('data/languages.geojson')
             />
           </svg>
         `;
+
         return L.marker(latlng, {
           icon: L.divIcon({
             html: diamondSVG,
             className: '',
-            iconSize: [12, 12],
-            iconAnchor: [6, 6]
+            iconSize: iconSize,
+            iconAnchor: iconAnchor
           })
         });
       },
