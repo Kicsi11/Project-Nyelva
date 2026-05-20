@@ -7,3 +7,31 @@ html, body {
   width: 100%;
   height: 100%;
 }
+
+/* --- Diamond Marker Base Styles --- */
+.diamond-marker {
+  width: 16px;
+  height: 16px;
+  background-color: #333; /* Default fallback color */
+  transform: rotate(45deg); /* Turns the square into a diamond */
+  transform-origin: center;
+  transition: transform 0.2s ease; /* Smooth scaling if needed */
+}
+
+/* --- Size Variations --- */
+.status-official {
+  /* Keeps the official marker at its normal, standard size */
+  width: 16px; 
+  height: 16px;
+}
+
+.status-unofficial {
+  /* Makes the unofficial marker noticeably smaller */
+  width: 10px;
+  height: 10px;
+}
+
+/* --- Color Placeholders (Add your language families here) --- */
+.family-indo-european { background-color: #ff5733; }
+.family-sino-tibetan  { background-color: #33ff57; }
+.family-afroasiatic   { background-color: #3357ff; }
