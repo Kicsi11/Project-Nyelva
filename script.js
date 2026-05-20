@@ -52,22 +52,24 @@ fetch('data/languages.geojson')
       }
     }).addTo(map);
 
-    // ===== POINTS (DYNAMIC DIAMONDS) =====
+    // ===== POINTS (DYNAMIC DIAMONDS & COLORS) =====
     L.geoJSON(data, {
       filter: f => f.properties.kind === 'point',
       pointToLayer: (feature, latlng) => {
         const isSmall = feature.properties.size === 'small';
         
-        // Changing iconSize to [6, 6] makes it ultra-small
         const iconSize = isSmall ? [6, 6] : [12, 12];
         const iconAnchor = isSmall ? [3, 3] : [6, 6];
         const svgSize = isSmall ? 10 : 18;
+
+        // Reads 'color' from GeoJSON properties, defaults to 'black' if missing
+        const pointColor = feature.properties.color || 'black';
 
         const diamondSVG = `
           <svg width="${svgSize}" height="${svgSize}" viewBox="0 0 24 24">
             <polygon
               points="12,0 24,12 12,24 0,12"
-              fill="black"
+              fill="${pointColor}"
               stroke="white"
               stroke-width="2"
             />
