@@ -1,80 +1,28 @@
-// Set map bounds
-const bounds = [[-90, -180], [90, 180]];
-const map = L.map('map', {
-  maxBounds: bounds,
-  maxBoundsViscosity: 1.0,
-  minZoom: 2
-}).setView([20, 0], 2);
-
-// Add base tiles
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19
-}).addTo(map);
-
-// ===== INTRODUCTION POPUP =====
-const introPopup = L.popup({
-  maxWidth: 350,
-  closeOnClick: true,
-  autoClose: true,
-  closeButton: true,
-  className: 'intro-popup'
-})
-  .setLatLng([20, 0]) // center of the map
-  .setContent(`
-    <div style="text-align:center; font-family: system-ui, sans-serif;">
-      <h2>🌍 Welcome to Nyelva Map! 🌍</h2>
-      <p>Here is a map for you to explore Earth's languages and speech varieties. Locations are based off the most dominantly spoken part or origin of the lect. Large diamonds show official languages, while smaller diamonds show dialects, creoles, and regional varieties!</p>
-      <p><em>Explore the deep layers of linguistic varieties below.</em></p>
-    </div>
-  `)
-  .openOn(map);
-
-// Load GeoJSON
-fetch('data/languages.geojson')
-  .then(res => res.json())
-  .then(data => {
-
-    // ===== AREAS =====
-    const areaLayersByLanguage = {};
-
-    L.geoJSON(data, {
-      filter: f => f.properties.kind === 'area',
-      style: feature => ({
-        color: '#666',
-        weight: 0.8,
-        fillColor: feature.properties.color || '#ccc',
-        fillOpacity: 0.5
-      }),
-      onEachFeature: (feature, layer) => {
-        // Fallback to old property structure if name isn't present in area features yet
-        const lang = feature.properties.name || feature.properties.language;
-        if (!areaLayersByLanguage[lang]) areaLayersByLanguage[lang] = [];
-        areaLayersByLanguage[lang].push(layer);
-      }
-    }).addTo(map);
-
-    // ===== POINTS (DYNAMIC DIAMONDS) =====
+// ===== POINTS (REAL DIAMONDS RE-STYLED) =====
     L.geoJSON(data, {
       filter: f => f.properties.kind === 'point',
       pointToLayer: (feature, latlng) => {
-        // 1. Assign pixel size using the official flag (Official = 30px, Unofficial = 18px)
-        const size = feature.properties.is_official ? 30 : 18;
+        // 1. Assign pixel size based on official flag (Official = 28px, Regional = 16px)
+        // Adjusted slightly to match the original layout proportions beautifully
+        const size = feature.properties.is_official ? 28 : 16;
         
-        // 2. Generate the SVG design using the custom family color
+        // 2. Generate the traditional sharp diamond using your custom family color
         const diamondSVG = `
-          <svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2L2 12L12 22L22 12L12 2ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17Z" 
-                  fill="${feature.properties.color || '#333'}" 
-                  stroke="white" 
-                  stroke-width="1.5"/>
+          <svg width="${size}" height="${size}" viewBox="0 0 24 24">
+            <polygon
+              points="12,0 24,12 12,24 0,12"
+              fill="${feature.properties.color || '#333'}"
+              stroke="white"
+              stroke-width="2"
+            />
           </svg>
         `;
         
-        // 3. Render icon anchor calculated dynamically to stay centered
+        // 3. Render icon anchor calculated dynamically to stay perfectly centered
         return L.marker(latlng, {
           icon: L.divIcon({
             html: diamondSVG,
-            className: '',
+            className: 'custom-diamond-icon', // Keeps the transparent box fix active
             iconSize: [size, size],
             iconAnchor: [size / 2, size / 2],
             popupAnchor: [0, -size / 2]
@@ -102,7 +50,7 @@ fetch('data/languages.geojson')
           }
         });
 
-        // 4. Build custom formatted data popup table layout
+        // 4. Custom formatted data popup table layout
         const popupHTML = `
           <div style="font-family: system-ui, sans-serif; padding: 4px; min-width: 180px;">
             <h3 style="margin: 0 0 2px 0; color: ${props.color || '#2c3e50'};">${lang || 'Unknown Lect'}</h3>
@@ -121,13 +69,3 @@ fetch('data/languages.geojson')
         layer.bindPopup(popupHTML);
       }
     }).addTo(map);
-
-    // ===== CLICK MAP TO RESET =====
-    map.on('click', () => {
-      Object.values(areaLayersByLanguage).flat().forEach(l =>
-        l.setStyle({ fillOpacity: 0.5, color: '#666' })
-      );
-    });
-
-  })
-  .catch(err => console.error(err));
