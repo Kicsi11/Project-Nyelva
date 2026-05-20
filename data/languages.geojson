@@ -4,16 +4,16 @@
  {
       "type": "Feature",
       "properties": {
-        "language": "Basque (euskara)",
-        "family": "Isolate language",
+        "language": "Icelandic (íslenska)",
+        "family": "Germanic language",
         "kind": "point",
-        "color": "gray",
-        "size": "small",
-        "description": "Ancestry: Isolate language<br>L1 Speakers: ~760k<br>Script: Latin"
+        "color": "blue",
+        "description": "Germanic language"
+        "wikipedia": "https://en.wikipedia.org/wiki/Icelandic_language"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-2.472694, 42.947778]
+        "coordinates": [-18.154645, 64.720578]
       }
     },   
 {
@@ -22,6 +22,7 @@
         "language": "Rusyn (русиньскый язык)",
         "family": "Slavic language",
         "kind": "point",
+        "size": "small",
         "description": "Ancestry: East Slavic, Slavic language<br>L1 Speakers: ~70k<br>Script: : Cyrillic"
       },
       "geometry": {
