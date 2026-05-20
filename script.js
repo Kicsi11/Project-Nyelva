@@ -12,18 +12,19 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // ===== INTRODUCTION POPUP =====
-L.popup({
+const introPopup = L.popup({
   maxWidth: 350,
   closeOnClick: true,
   autoClose: true,
   closeButton: true,
   className: 'intro-popup'
 })
-  .setLatLng([20, 0])
+  .setLatLng([20, 0]) // center of the map
   .setContent(`
-    <div style="text-align:center; font-family: system-ui, sans-serif;">
+    <div style="text-align:center;">
       <h2>🌍 Welcome to Nyelva Map! 🌍</h2>
-      <p>Locations are based off the most dominantly spoken part or origin of the lect. Large diamonds show official languages, while smaller diamonds show dialects and regional varieties!</p>
+      <p>Here is a map for you to explore Earth's languages. Locations are based off the most dominantly spoken part or origin of the language. Also, dialects and languages don't have a clear division so this map isn't 100% accurate (so as almost every language map you see).</p>
+      <p><em>So far there are 59 languages</em></p>
     </div>
   `)
   .openOn(map);
@@ -37,7 +38,7 @@ fetch('data/languages.geojson')
     const areaLayersByLanguage = {};
 
     L.geoJSON(data, {
-      filter: f => f && f.properties && f.properties.kind === 'area',
+      filter: f => f.properties.kind === 'area',
       style: feature => ({
         color: '#666',
         weight: 0.8,
@@ -45,77 +46,55 @@ fetch('data/languages.geojson')
         fillOpacity: 0.5
       }),
       onEachFeature: (feature, layer) => {
-        const lang = feature.properties.name || feature.properties.language || 'Unknown';
+        const lang = feature.properties.language;
         if (!areaLayersByLanguage[lang]) areaLayersByLanguage[lang] = [];
         areaLayersByLanguage[lang].push(layer);
       }
     }).addTo(map);
 
-    // ===== POINTS (REAL DIAMONDS RE-STYLED) =====
+    // ===== POINTS (REAL DIAMONDS) =====
     L.geoJSON(data, {
-      filter: f => f && f.properties && f.properties.kind === 'point',
+      filter: f => f.properties.kind === 'point',
       pointToLayer: (feature, latlng) => {
-        const props = feature.properties || {};
-        
-        // Dynamic sizing safety check
-        const size = props.is_official ? 28 : 16;
-        const markerColor = props.color || '#333333'; // Default to dark grey if color is missing
-        
         const diamondSVG = `
-          <svg width="${size}" height="${size}" viewBox="0 0 24 24">
+          <svg width="18" height="18" viewBox="0 0 24 24">
             <polygon
               points="12,0 24,12 12,24 0,12"
-              fill="${markerColor}"
+              fill="black"
               stroke="white"
               stroke-width="2"
             />
           </svg>
         `;
-        
         return L.marker(latlng, {
           icon: L.divIcon({
             html: diamondSVG,
-            className: 'custom-diamond-icon',
-            iconSize: [size, size],
-            iconAnchor: [size / 2, size / 2],
-            popupAnchor: [0, -size / 2]
+            className: '',
+            iconSize: [12, 12],
+            iconAnchor: [6, 6]
           })
         });
       },
       onEachFeature: (feature, layer) => {
-        const props = feature.properties || {};
-        const lang = props.name || props.language || 'Unknown Lect';
+        const lang = feature.properties.language;
 
         layer.on('click', e => {
-          L.DomEvent.stopPropagation(e);
+          L.DomEvent.stopPropagation(e); // prevent map click from firing
 
+          // Reset all areas
           Object.values(areaLayersByLanguage).flat().forEach(l =>
             l.setStyle({ fillOpacity: 0.5, color: '#666' })
           );
 
-          if (areaLayersByLanguage[lang]) {
-            areaLayersByLanguage[lang].forEach(l =>
-              l.setStyle({ fillOpacity: 0.8, color: '#333' })
-            );
-          }
+          // Highlight only this language
+          (areaLayersByLanguage[lang] || []).forEach(l =>
+            l.setStyle({ fillOpacity: 0.8, color: '#333' })
+          );
         });
 
-        const popupHTML = `
-          <div style="font-family: system-ui, sans-serif; padding: 4px; min-width: 180px;">
-            <h3 style="margin: 0 0 2px 0; color: ${props.color || '#2c3e50'};">${lang}</h3>
-            <p style="margin: 0 0 12px 0; font-style: italic; color: #7f8c8d; font-size: 0.95rem;">${props.native_name || ''}</p>
-            
-            <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; margin-bottom: 12px;">
-              <tr style="border-bottom: 1px solid #eee;"><td style="padding: 4px 0;"><b>Family</b></td><td style="text-align: right;">${props.family || 'Unclassified'}</td></tr>
-              <tr style="border-bottom: 1px solid #eee;"><td style="padding: 4px 0;"><b>Branch</b></td><td style="text-align: right;">${props.branch || 'None'}</td></tr>
-              <tr style="border-bottom: 1px solid #eee;"><td style="padding: 4px 0;"><b>Status</b></td><td style="text-align: right;"><span style="background: ${props.is_official ? '#d4edda' : '#e2e3e5'}; color: ${props.is_official ? '#155724' : '#383d41'}; padding: 2px 6px; border-radius: 4px; font-weight: bold; font-size: 0.75rem;">${props.is_official ? 'Official' : 'Regional'}</span></td></tr>
-            </table>
-            
-            <a href="${props.wikipedia_link || '#'}" target="_blank" style="color: ${props.color || '#3498db'}; text-decoration: none; font-weight: bold; font-size: 0.85rem; display: block; text-align: right;">Wikipedia Article →</a>
-          </div>
-        `;
-        
-        layer.bindPopup(popupHTML);
+        layer.bindPopup(
+          `<strong>${lang}</strong><br>${feature.properties.description || ''}`
+        );
       }
     }).addTo(map);
 
@@ -127,4 +106,4 @@ fetch('data/languages.geojson')
     });
 
   })
-  .catch(err => console.error("Map loading error: ", err));
+  .catch(err => console.error(err));
