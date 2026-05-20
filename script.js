@@ -58,10 +58,10 @@ fetch('data/languages.geojson')
       pointToLayer: (feature, latlng) => {
         const isSmall = feature.properties.size === 'small';
         
-        // Micro-adjusted small size dimensions
-        const iconSize = isSmall ? [7, 7] : [12, 12];
-        const iconAnchor = isSmall ? [3.5, 3.5] : [6, 6];
-        const svgSize = isSmall ? 11 : 18;
+        // Micro-adjusted dimensions (Big diamond size reduced by exactly 1)
+        const iconSize = isSmall ? [7, 7] : [11, 11];
+        const iconAnchor = isSmall ? [3.5, 3.5] : [5.5, 5.5];
+        const svgSize = isSmall ? 11 : 17;
 
         // Reads 'color' from GeoJSON properties, defaults to 'black' if missing
         const pointColor = feature.properties.color || 'black';
@@ -103,10 +103,8 @@ fetch('data/languages.geojson')
           );
         });
 
-        // OPTION 2 INTEGRATION: Fall back to auto-search if custom "wikipedia" property doesn't exist
+        // Option 2 Integration: Custom fallback system for Wikipedia links
         const customUrl = feature.properties.wikipedia || `https://en.wikipedia.org/wiki/${lang.split('(')[0].trim()}_language`;
-        
-        // Build the clickable link markup
         const wikiLinkHTML = `<br><br><a href="${customUrl}" target="_blank" style="color: #3498db; text-decoration: none; font-weight: bold;">Wikipedia Article →</a>`;
 
         layer.bindPopup(
