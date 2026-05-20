@@ -56,51 +56,22 @@ fetch('data/languages.geojson')
     L.geoJSON(data, {
       filter: f => f.properties.kind === 'point',
       pointToLayer: (feature, latlng) => {
-        
-        // 1. Determine Size based on Status
-        // Official keeps your original 18px size; Unofficial scales down to 11px
-        const isOfficial = feature.properties.status === 'official';
-        const svgSize = isOfficial ? 18 : 11; 
-        
-        // Leaflet needs to know the icon sizes to anchor them properly to coordinates
-        const iconSize = isOfficial ? [12, 12] : [8, 8];
-        const iconAnchor = isOfficial ? [6, 6] : [4, 4];
-
-        // 2. Determine Color based on Family
-        // If a color is explicitly defined in properties, use it; otherwise fallback to family match
-        let diamondColor = feature.properties.color; 
-        
-        if (!diamondColor) {
-          const family = feature.properties.family ? feature.properties.family.toLowerCase() : '';
-          if (family.includes('indo-european')) {
-            diamondColor = '#3498db'; // Blue
-          } else if (family.includes('sino-tibetan')) {
-            diamondColor = '#e74c3c'; // Red
-          } else if (family.includes('afroasiatic')) {
-            diamondColor = '#2ecc71'; // Green
-          } else {
-            diamondColor = '#9b59b6'; // Purple (Default fallback)
-          }
-        }
-
-        // 3. Inject size and color variables dynamically into the template
         const diamondSVG = `
-          <svg width="${svgSize}" height="${svgSize}" viewBox="0 0 24 24">
+          <svg width="18" height="18" viewBox="0 0 24 24">
             <polygon
               points="12,0 24,12 12,24 0,12"
-              fill="${diamondColor}"
+              fill="black"
               stroke="white"
               stroke-width="2"
             />
           </svg>
         `;
-
         return L.marker(latlng, {
           icon: L.divIcon({
             html: diamondSVG,
             className: '',
-            iconSize: iconSize,
-            iconAnchor: iconAnchor
+            iconSize: [12, 12],
+            iconAnchor: [6, 6]
           })
         });
       },
