@@ -1,14 +1,14 @@
 {
   "type": "FeatureCollection",
   "features": [
- {
+    {
       "type": "Feature",
       "properties": {
         "language": "Icelandic (íslenska)",
         "family": "Germanic language",
         "kind": "point",
         "color": "blue",
-        "description": "Germanic language"
+        "description": "Germanic language",
         "wikipedia": "https://en.wikipedia.org/wiki/Icelandic_language"
       },
       "geometry": {
@@ -16,34 +16,34 @@
         "coordinates": [-18.154645, 64.720578]
       }
     },   
-{
+    {
       "type": "Feature",
       "properties": {
         "language": "Rusyn (русиньскый язык)",
         "family": "Slavic language",
         "kind": "point",
         "size": "small",
-        "description": "Ancestry: East Slavic, Slavic language<br>L1 Speakers: ~70k<br>Script: : Cyrillic"
+        "description": "Ancestry: East Slavic, Slavic language<br>L1 Speakers: ~70k<br>Script: Cyrillic"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [22.187206, 49.065949]
       }
     },
-{
+    {
       "type": "Feature",
       "properties": {
         "language": "Slovak (Slovenský)",
         "family": "Slavic language",
         "kind": "point",
-        "description": "Ancestry: West Slavic, Slavic language<br>L1 Speakers: ~5 Million<br>Script: : Latin"
+        "description": "Ancestry: West Slavic, Slavic language<br>L1 Speakers: ~5 Million<br>Script: Latin"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [19.282193, 48.631457]
       }
     },
-{
+    {
       "type": "Feature",
       "properties": {
         "language": "English",
