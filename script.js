@@ -6,8 +6,8 @@ const map = L.map('map', {
   minZoom: 2
 }).setView([20, 0], 2);
 
-// Add modern minimal base tiles (CartoDB Positron)
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+// Add vibrant, colorful base tiles (CartoDB Voyager)
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
   maxZoom: 19,
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
 }).addTo(map);
@@ -46,10 +46,10 @@ fetch('data/languages.geojson')
     L.geoJSON(data, {
       filter: f => f.properties.kind === 'area',
       style: feature => ({
-        color: feature.properties.color || '#95a5a6', // Soft color boundary matching the family color
-        weight: 0.6,                                  // Clean, thin border
+        color: '#ffffff',             // Crisp white borders look incredible against Voyager tiles
+        weight: 1.2,                  // Clean, modern boundary line thickness
         fillColor: feature.properties.color || '#ccc',
-        fillOpacity: 0.25                             // Softer base opacity so background map breathes
+        fillOpacity: 0.4              // Richer base opacity so colors aren't washed out
       }),
       onEachFeature: (feature, layer) => {
         const lang = feature.properties.language;
@@ -58,7 +58,7 @@ fetch('data/languages.geojson')
       }
     }).addTo(map);
 
-    // ===== POINTS (DYNAMIC DIAMONDS & COLORS) =====
+    // ===== POINTS (GLOSSY DYNAMIC DIAMONDS) =====
     L.geoJSON(data, {
       filter: f => f.properties.kind === 'point',
       pointToLayer: (feature, latlng) => {
@@ -66,31 +66,44 @@ fetch('data/languages.geojson')
         
         let iconSize, iconAnchor, svgSize;
 
-        // 3-Tier Hierarchy sizes
+        // 3-Tier Hierarchy sizes (adjusted slightly to accommodate shadows cleanly)
         if (sizeProp === 'small') {
-          iconSize = [7, 7];
-          iconAnchor = [3.5, 3.5];
-          svgSize = 11;
-        } else if (sizeProp === 'medium') {
-          iconSize = [9, 9];
-          iconAnchor = [4.5, 4.5];
+          iconSize = [10, 10];
+          iconAnchor = [5, 5];
           svgSize = 14;
+        } else if (sizeProp === 'medium') {
+          iconSize = [14, 14];
+          iconAnchor = [7, 7];
+          svgSize = 18;
         } else {
-          // Default Large (Using your precisely adjusted 11x11 scale)
-          iconSize = [11, 11];
-          iconAnchor = [5.5, 5.5];
-          svgSize = 17;
+          // Default Large
+          iconSize = [18, 18];
+          iconAnchor = [9, 9];
+          svgSize = 22;
         }
 
         const pointColor = feature.properties.color || 'black';
 
+        // High-end stylized SVG with embedded gradients and drop-shadows
         const diamondSVG = `
-          <svg width="${svgSize}" height="${svgSize}" viewBox="0 0 24 24">
+          <svg width="${svgSize}" height="${svgSize}" viewBox="0 0 24 24" style="filter: drop-shadow(0px 2px 3px rgba(0,0,0,0.35));">
+            <defs>
+              <linearGradient id="grad-${pointColor.replace('#','')}" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#ffffff; stop-opacity:0.35" />
+                <stop offset="40%" style="stop-color:${pointColor}; stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#000000; stop-opacity:0.2" />
+              </linearGradient>
+            </defs>
             <polygon
-              points="12,0 24,12 12,24 0,12"
+              points="12,1 23,12 12,23 1,12"
               fill="${pointColor}"
-              stroke="white"
-              stroke-width="2"
+            />
+            <polygon
+              points="12,1 23,12 12,23 1,12"
+              fill="url(#grad-${pointColor.replace('#','')})"
+              stroke="#ffffff"
+              stroke-width="1.8"
+              stroke-linejoin="round"
             />
           </svg>
         `;
@@ -98,7 +111,7 @@ fetch('data/languages.geojson')
         return L.marker(latlng, {
           icon: L.divIcon({
             html: diamondSVG,
-            className: '',
+            className: 'custom-diamond-marker', // targetable class name
             iconSize: iconSize,
             iconAnchor: iconAnchor
           })
@@ -112,19 +125,16 @@ fetch('data/languages.geojson')
 
           // Reset all areas
           Object.values(areaLayersByLanguage).flat().forEach(l =>
-            l.setStyle({ fillOpacity: 0.25, color: '#95a5a6' })
+            l.setStyle({ fillOpacity: 0.4, color: '#ffffff', weight: 1.2 })
           );
 
-          // Highlight only this language
+          // Highlight selected language area with maximum clarity
           (areaLayersByLanguage[lang] || []).forEach(l =>
-            l.setStyle({ fillOpacity: 0.7, color: '#2c3e50' })
+            l.setStyle({ fillOpacity: 0.75, color: '#2c3e50', weight: 2.0 })
           );
         });
 
-        // Wikipedia Custom/Fallback integration 
         const customUrl = feature.properties.wikipedia || `https://en.wikipedia.org/wiki/${lang.split('(')[0].trim()}_language`;
-        
-        // Compact tight styling layout with no <br><br> drop
         const wikiLinkHTML = `<div style="margin-top: 10px;"><a href="${customUrl}" target="_blank" style="color: #3498db; text-decoration: none; font-weight: bold; font-size: 13px;">Wikipedia Article →</a></div>`;
 
         layer.bindPopup(
@@ -136,7 +146,7 @@ fetch('data/languages.geojson')
     // ===== CLICK MAP TO RESET =====
     map.on('click', () => {
       Object.values(areaLayersByLanguage).flat().forEach(l =>
-        l.setStyle({ fillOpacity: 0.25, color: '#95a5a6' })
+        l.setStyle({ fillOpacity: 0.4, color: '#ffffff', weight: 1.2 })
       );
     });
 
@@ -149,18 +159,15 @@ const aboutBtn = document.getElementById('about-btn');
 const aboutPanel = document.getElementById('about-panel');
 const aboutCloseBtn = document.getElementById('about-close-btn');
 
-// Open the panel and stop click propagation to prevent underlying map triggers
 aboutBtn.addEventListener('click', (e) => {
   L.DomEvent.stopPropagation(e);
   aboutPanel.classList.remove('hidden');
 });
 
-// Close the panel using the cross button
 aboutCloseBtn.addEventListener('click', () => {
   aboutPanel.classList.add('hidden');
 });
 
-// Close the panel safely if the user clicks anywhere on the dark backdrop blur
 aboutPanel.addEventListener('click', (e) => {
   if (e.target === aboutPanel) {
     aboutPanel.classList.add('hidden');
