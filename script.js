@@ -6,9 +6,10 @@ const map = L.map('map', {
   minZoom: 2
 }).setView([20, 0], 2);
 
-// Add base tiles
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19
+// Add modern minimal base tiles (CartoDB Positron)
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
 }).addTo(map);
 
 // ===== INTRODUCTION POPUP =====
@@ -21,10 +22,15 @@ const introPopup = L.popup({
 })
   .setLatLng([20, 0]) // center of the map
   .setContent(`
-    <div style="text-align:center;">
-      <h2>🌍 Welcome to Nyelva Map! 🌍</h2>
-      <p>Here is a map for you to explore Earth's languages. Locations are based off the most dominantly spoken part or origin of the language. Also, dialects and languages don't have a clear division so this map isn't 100% accurate (so as almost every language map you see).</p>
-      <p><em>So far there are 59 languages</em></p>
+    <div style="text-align: center; font-family: -apple-system, sans-serif; color: #2c3e50; padding: 10px;">
+      <h2 style="margin-top: 0; margin-bottom: 10px; font-size: 20px; color: #1a252f;">🌍 Welcome to Nyelva Map!</h2>
+      <p style="font-size: 13px; line-height: 1.6; color: #5a6c7d; margin-bottom: 0;">
+        Explore Earth's languages based on core origins and regional dominance. 
+        Linguistic boundaries are naturally fluid and historical—dive in to discover relationships across families.
+      </p>
+      <div style="margin-top: 14px; display: inline-block; background: #eef2f5; padding: 4px 12px; border-radius: 12px; font-size: 11px; font-weight: 600; color: #7f8c8d;">
+        🎯 Currently Cataloging 59 Languages
+      </div>
     </div>
   `)
   .openOn(map);
@@ -40,10 +46,10 @@ fetch('data/languages.geojson')
     L.geoJSON(data, {
       filter: f => f.properties.kind === 'area',
       style: feature => ({
-        color: '#666',
-        weight: 0.8,
+        color: feature.properties.color || '#95a5a6', // Soft color boundary matching the family color
+        weight: 0.6,                                  // Clean, thin border
         fillColor: feature.properties.color || '#ccc',
-        fillOpacity: 0.5
+        fillOpacity: 0.25                             // Softer base opacity so background map breathes
       }),
       onEachFeature: (feature, layer) => {
         const lang = feature.properties.language;
@@ -106,12 +112,12 @@ fetch('data/languages.geojson')
 
           // Reset all areas
           Object.values(areaLayersByLanguage).flat().forEach(l =>
-            l.setStyle({ fillOpacity: 0.5, color: '#666' })
+            l.setStyle({ fillOpacity: 0.25, color: '#95a5a6' })
           );
 
           // Highlight only this language
           (areaLayersByLanguage[lang] || []).forEach(l =>
-            l.setStyle({ fillOpacity: 0.8, color: '#333' })
+            l.setStyle({ fillOpacity: 0.7, color: '#2c3e50' })
           );
         });
 
@@ -119,10 +125,10 @@ fetch('data/languages.geojson')
         const customUrl = feature.properties.wikipedia || `https://en.wikipedia.org/wiki/${lang.split('(')[0].trim()}_language`;
         
         // Compact tight styling layout with no <br><br> drop
-        const wikiLinkHTML = `<div style="margin-top: 8px;"><a href="${customUrl}" target="_blank" style="color: #3498db; text-decoration: none; font-weight: bold; font-size: 13px;">Wikipedia Article →</a></div>`;
+        const wikiLinkHTML = `<div style="margin-top: 10px;"><a href="${customUrl}" target="_blank" style="color: #3498db; text-decoration: none; font-weight: bold; font-size: 13px;">Wikipedia Article →</a></div>`;
 
         layer.bindPopup(
-          `<strong>${lang}</strong><br>${feature.properties.description || ''}${wikiLinkHTML}`
+          `<strong>${lang}</strong><div style="color: #5a6c7d; font-size: 13px; line-height: 1.5; margin-top: 4px;">${feature.properties.description || ''}</div>${wikiLinkHTML}`
         );
       }
     }).addTo(map);
@@ -130,7 +136,7 @@ fetch('data/languages.geojson')
     // ===== CLICK MAP TO RESET =====
     map.on('click', () => {
       Object.values(areaLayersByLanguage).flat().forEach(l =>
-        l.setStyle({ fillOpacity: 0.5, color: '#666' })
+        l.setStyle({ fillOpacity: 0.25, color: '#95a5a6' })
       );
     });
 
