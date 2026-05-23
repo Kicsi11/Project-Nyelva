@@ -8,14 +8,30 @@
         "family": "West Scandinavian<br>Germanic language",
         "kind": "point",
         "color": "blue",
-        "description": "Germanic language",
+        "description": "West Scandinavian<br>Germanic language",
         "wikipedia": "https://en.wikipedia.org/wiki/Icelandic_language"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [-18.154645, 64.720578]
       }
-    },   
+    }, 
+{
+      "type": "Feature",
+      "properties": {
+        "language": "Slovak (slovencina)",
+        "family": "West Slavic<br>Slavic language",
+        "kind": "point",
+        "size": "medium",
+        "color": "blue",
+        "description": "West Slavic<br>Slavic language",
+        "wikipedia": "https://en.wikipedia.org/wiki/Icelandic_language"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-18.154645, 64.720578]
+      }
+    },
     {
       "type": "Feature",
       "properties": {
