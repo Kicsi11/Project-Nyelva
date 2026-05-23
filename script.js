@@ -115,7 +115,10 @@ fetch('data/languages.geojson')
           );
         });
 
+        // Wikipedia Custom/Fallback integration 
         const customUrl = feature.properties.wikipedia || `https://en.wikipedia.org/wiki/${lang.split('(')[0].trim()}_language`;
+        
+        // Compact tight styling layout with no <br><br> drop
         const wikiLinkHTML = `<div style="margin-top: 8px;"><a href="${customUrl}" target="_blank" style="color: #3498db; text-decoration: none; font-weight: bold; font-size: 13px;">Wikipedia Article →</a></div>`;
 
         layer.bindPopup(
