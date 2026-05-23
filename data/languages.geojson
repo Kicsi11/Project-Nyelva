@@ -8,7 +8,7 @@
         "family": "West Scandinavian<br>Germanic language",
         "kind": "point",
         "color": "blue",
-        "description": "West Scandinavian<br>Germanic language",
+        "description": "Germanic language",
         "wikipedia": "https://en.wikipedia.org/wiki/Icelandic_language"
       },
       "geometry": {
@@ -24,7 +24,7 @@
         "kind": "point",
         "size": "medium",
         "color": "blue",
-        "description": "West Slavic<br>Slavic language",
+        "description": "Slavic language",
         "wikipedia": "https://en.wikipedia.org/wiki/Icelandic_language"
       },
       "geometry": {
