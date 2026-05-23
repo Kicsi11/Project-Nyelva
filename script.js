@@ -136,3 +136,27 @@ fetch('data/languages.geojson')
 
   })
   .catch(err => console.error(err));
+
+
+// ===== ABOUT PANEL TOGGLE LOGIC =====
+const aboutBtn = document.getElementById('about-btn');
+const aboutPanel = document.getElementById('about-panel');
+const aboutCloseBtn = document.getElementById('about-close-btn');
+
+// Open the panel and stop click propagation to prevent underlying map triggers
+aboutBtn.addEventListener('click', (e) => {
+  L.DomEvent.stopPropagation(e);
+  aboutPanel.classList.remove('hidden');
+});
+
+// Close the panel using the cross button
+aboutCloseBtn.addEventListener('click', () => {
+  aboutPanel.classList.add('hidden');
+});
+
+// Close the panel safely if the user clicks anywhere on the dark backdrop blur
+aboutPanel.addEventListener('click', (e) => {
+  if (e.target === aboutPanel) {
+    aboutPanel.classList.add('hidden');
+  }
+});
