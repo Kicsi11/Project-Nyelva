@@ -1,24 +1,154 @@
-/* This ensures the footer sits on top of the map at the bottom */
+/* Ensure map takes up full screen */
+body, html { 
+  margin: 0; 
+  padding: 0; 
+  height: 100%; 
+}
+
+#map { 
+  height: 100vh; 
+  width: 100%; 
+}
+
+/* ===== SITE FOOTER ===== */
 #site-footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.8); /* See-through white */
-  z-index: 1000; /* Keeps it above the map */
+  background: rgba(255, 255, 255, 0.85); /* Premium see-through white */
+  backdrop-filter: blur(8px);            /* Softens the map background underneath */
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1000;                         /* Keeps it securely above the map */
   text-align: center;
-  padding: 10px 0;
-  font-family: sans-serif;
+  padding: 12px 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
+
 #site-footer a {
   color: #333;
   text-decoration: none;
-  margin: 0 10px;
   font-weight: bold;
 }
+
 #site-footer a:hover {
   text-decoration: underline;
 }
-/* Ensure map takes up full screen but leaves room for logic */
-body, html { margin: 0; padding: 0; height: 100%; }
-#map { height: 100vh; width: 100%; }
+
+/* ===== PREMIUM ABOUT BUTTON (INTEGRATED INTO FOOTER) ===== */
+#about-btn {
+  background: #2c3e50;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#about-btn svg {
+  width: 14px;
+  height: 14px;
+  color: white;
+}
+
+#about-btn:hover {
+  background: #1a252f;
+  transform: translateY(-1px);
+}
+
+/* ===== ABOUT PANEL OVERLAY ===== */
+#about-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 2000; /* Higher than map and footer so it blocks clicks */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Panel Content Box */
+.about-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 480px;
+  width: 88%;
+  max-height: 75vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: #2c3e50;
+  animation: modalFadeIn 0.25s ease-out;
+}
+
+.about-content h2 {
+  margin-top: 0;
+  font-size: 22px;
+  color: #1a252f;
+}
+
+.about-content h3 {
+  font-size: 16px;
+  margin-top: 20px;
+  color: #1a252f;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 6px;
+}
+
+.about-content ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.about-content li {
+  margin-bottom: 10px;
+}
+
+/* Panel Close Cross Button */
+#about-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #95a5a6;
+  transition: color 0.2s;
+}
+
+#about-close-btn:hover {
+  color: #2c3e50;
+}
+
+/* Utility Hidden Class */
+.hidden {
+  display: none !important;
+}
+
+/* Soft entry animation for modal panel */
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
