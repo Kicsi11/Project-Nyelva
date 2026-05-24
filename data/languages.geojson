@@ -5,15 +5,16 @@
       "type": "Feature",
       "properties": {
         "language": "Icelandic (íslenska)",
-        "family": "West Scandinavian<br>Germanic language",
+        "family": "Germanic language",
         "kind": "point",
         "color": "blue",
-        "description": "Germanic language",
+        "size": "medium",
+        "description": "Ancestry: West Scandinavian, Germanic language<br>Speakers: ~380k<br>Status: Official language of Iceland"
         "wikipedia": "https://en.wikipedia.org/wiki/Icelandic_language"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-18.154645, 64.720578]
+        "coordinates": [-18.055308, 64.870641]
       }
     }, 
 {
@@ -38,8 +39,9 @@
         "language": "Rusyn (русиньскый язык)",
         "family": "Slavic language",
         "kind": "point",
+        "color": "blue",
         "size": "small",
-        "description": "Ancestry: East Slavic, Slavic language<br>L1 Speakers: ~70k<br>Script: Cyrillic"
+        "description": "Ancestry: East Slavic, Slavic language<br>Speakers: ~70k<br>Status: Cyrillic"
       },
       "geometry": {
         "type": "Point",
