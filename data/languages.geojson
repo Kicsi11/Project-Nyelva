@@ -7,9 +7,11 @@
         "language": "Icelandic (íslenska)",
         "family": "Germanic language",
         "kind": "point",
-        "color": "blue",
+        "color": "#3498db",
         "size": "medium",
-        "description": "Ancestry: West Scandinavian, Germanic language<br>Speakers: ~380k<br>Status: Official language of Iceland"
+        "ancestry": "Indo-European → Germanic → West Scandinavian",
+        "speakers": "380,000",
+        "status": "Official language of Iceland",
         "wikipedia": "https://en.wikipedia.org/wiki/Icelandic_language"
       },
       "geometry": {
@@ -17,16 +19,18 @@
         "coordinates": [-18.055308, 64.870641]
       }
     }, 
-{
+    {
       "type": "Feature",
       "properties": {
-        "language": "Slovak (slovencina)",
-        "family": "West Slavic<br>Slavic language",
+        "language": "Slovak (slovenčina)",
+        "family": "Slavic language",
         "kind": "point",
+        "color": "#2ecc71",
         "size": "medium",
-        "color": "blue",
-        "description": "Slavic language",
-        "wikipedia": "https://en.wikipedia.org/wiki/Icelandic_language"
+        "ancestry": "Indo-European → Slavic → West Slavic",
+        "speakers": "5.4 Million",
+        "status": "Official language of Slovakia",
+        "wikipedia": "https://en.wikipedia.org/wiki/Slovak_language"
       },
       "geometry": {
         "type": "Point",
@@ -39,9 +43,12 @@
         "language": "Rusyn (русиньскый язык)",
         "family": "Slavic language",
         "kind": "point",
-        "color": "blue",
+        "color": "#2ecc71",
         "size": "small",
-        "description": "Ancestry: East Slavic, Slavic language<br>Speakers: ~70k<br>Status: Cyrillic"
+        "ancestry": "Indo-European → Slavic → East Slavic",
+        "speakers": "70,000",
+        "status": "Recognized Minority Language",
+        "wikipedia": "https://en.wikipedia.org/wiki/Rusyn_language"
       },
       "geometry": {
         "type": "Point",
@@ -52,9 +59,14 @@
       "type": "Feature",
       "properties": {
         "language": "English",
-        "family": "Germanic",
+        "family": "Germanic language",
         "kind": "point",
-        "description": "Ancestry: Anglo-Frisian, Germanic language<br>L1 Speakers: ~375 Million<br>Script: Latin"
+        "color": "#3498db",
+        "size": "large",
+        "ancestry": "Indo-European → Germanic → West Germanic",
+        "speakers": "1.5 Billion",
+        "status": "De Facto National",
+        "wikipedia": "https://en.wikipedia.org/wiki/English_language"
       },
       "geometry": {
         "type": "Point",
@@ -67,7 +79,12 @@
         "language": "Scots",
         "family": "Germanic language",
         "kind": "point",
-        "description": "Ancestry: Anglo-Frisian, Germanic language<br>L1 Speakers: ~1.5 Million<br>Script: Latin"
+        "color": "#3498db",
+        "size": "medium",
+        "ancestry": "Indo-European → Germanic → West Germanic",
+        "speakers": "1.5 Million",
+        "status": "Recognized Regional Language",
+        "wikipedia": "https://en.wikipedia.org/wiki/Scots_language"
       },
       "geometry": {
         "type": "Point",
@@ -80,7 +97,12 @@
         "language": "Manx (Gaelg)",
         "family": "Celtic language",
         "kind": "point",
-        "description": "Ancestry: Goidelic, Celtic language<br>L1 Speakers: ~0<br>Script: Latin"
+        "color": "#e74c3c",
+        "size": "small",
+        "ancestry": "Indo-European → Celtic → Goidelic",
+        "speakers": "2,200 (Revival)",
+        "status": "Recognized Minority Language",
+        "wikipedia": "https://en.wikipedia.org/wiki/Manx_language"
       },
       "geometry": {
         "type": "Point",
