@@ -12,22 +12,24 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
 }).addTo(map);
 
-// ===== INTRODUCTION POPUP =====
+// ===== INTRODUCTION POPUP (SCALED UP EDITION) =====
 const introPopup = L.popup({
   closeOnClick: true,
   autoClose: true,
   closeButton: true,
-  className: 'intro-popup'
+  className: 'intro-popup',
+  minWidth: 320,   // Prevents layout squishing
+  maxWidth: 420    // Broadens the landscape on desktop
 })
   .setLatLng([20, 0]) // center of the map
   .setContent(`
-    <div style="text-align: center; font-family: -apple-system, sans-serif; color: #2c3e50; padding: 4px;">
-      <h2 style="margin-top: 0; margin-bottom: 6px; font-size: 13px; color: #1a252f;">🌍 Welcome to Nyelva Map!</h2>
-      <p style="font-size: 11px; line-height: 1.35; color: #5a6c7d; margin-bottom: 0;">
+    <div style="text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #2c3e50; padding: 12px 14px;">
+      <h2 style="margin-top: 0; margin-bottom: 10px; font-size: 18px; color: #1a252f; font-weight: 700;">🌍 Welcome to Nyelva Map!</h2>
+      <p style="font-size: 13px; line-height: 1.5; color: #5a6c7d; margin-bottom: 14px;">
         Explore Earth's languages based on core origins and regional dominance. 
         Discover any language's ancestry, total speaker count, and real-time status at a single glance.
       </p>
-      <div style="margin-top: 8px; display: inline-block; background: #eef2f5; padding: 3px 8px; border-radius: 12px; font-size: 10px; font-weight: 600; color: #7f8c8d;">
+      <div style="display: inline-block; background: #eef2f5; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 600; color: #7f8c8d;">
         🎯 Currently Cataloging 2 Lects
       </div>
     </div>
