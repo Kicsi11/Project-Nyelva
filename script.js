@@ -67,20 +67,20 @@ fetch('data/languages.geojson')
         
         let iconSize, iconAnchor, svgSize;
 
-        // 3-Tier Hierarchy sizes (adjusted to give the wrapper a steady bounding box)
+        // 3-Tier Hierarchy sizes (Each tier reduced by 1 pixel)
         if (sizeProp === 'small') {
-          iconSize = [16, 16];
-          iconAnchor = [8, 8];
-          svgSize = 14;
+          iconSize = [15, 15];      // Was [16, 16]
+          iconAnchor = [7.5, 7.5];  // Center anchor point
+          svgSize = 13;             // Was 14
         } else if (sizeProp === 'medium') {
-          iconSize = [20, 20];
-          iconAnchor = [10, 10];
-          svgSize = 18;
+          iconSize = [19, 19];      // Was [20, 20]
+          iconAnchor = [9.5, 9.5];  // Center anchor point
+          svgSize = 17;             // Was 18
         } else {
           // Default Large
-          iconSize = [24, 24];
-          iconAnchor = [12, 12];
-          svgSize = 22;
+          iconSize = [23, 23];      // Was [24, 24]
+          iconAnchor = [11.5, 11.5];// Center anchor point
+          svgSize = 21;             // Was 22
         }
 
         const pointColor = feature.properties.color || 'black';
