@@ -14,7 +14,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r
 
 // ===== INTRODUCTION POPUP =====
 const introPopup = L.popup({
-  maxWidth: 350,
+  maxWidth: 320,
   closeOnClick: true,
   autoClose: true,
   closeButton: true,
@@ -22,13 +22,13 @@ const introPopup = L.popup({
 })
   .setLatLng([20, 0]) // center of the map
   .setContent(`
-    <div style="text-align: center; font-family: -apple-system, sans-serif; color: #2c3e50; padding: 10px;">
-      <h2 style="margin-top: 0; margin-bottom: 10px; font-size: 20px; color: #1a252f;">🌍 Welcome to Nyelva Map!</h2>
-      <p style="font-size: 13px; line-height: 1.6; color: #5a6c7d; margin-bottom: 0;">
+    <div style="text-align: center; font-family: -apple-system, sans-serif; color: #2c3e50; padding: 6px;">
+      <h2 style="margin-top: 0; margin-bottom: 8px; font-size: 18px; color: #1a252f;">🌍 Welcome to Nyelva Map!</h2>
+      <p style="font-size: 12px; line-height: 1.5; color: #5a6c7d; margin-bottom: 0;">
         Explore Earth's languages based on core origins and regional dominance. 
         Discover any language's ancestry, total speaker count, and real-time status at a single glance.
       </p>
-      <div style="margin-top: 14px; display: inline-block; background: #eef2f5; padding: 4px 12px; border-radius: 12px; font-size: 11px; font-weight: 600; color: #7f8c8d;">
+      <div style="margin-top: 10px; display: inline-block; background: #eef2f5; padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; color: #7f8c8d;">
         🎯 Currently Cataloging 2 Lects
       </div>
     </div>
@@ -46,10 +46,10 @@ fetch('data/languages.geojson')
     L.geoJSON(data, {
       filter: f => f.properties.kind === 'area',
       style: feature => ({
-        color: '#ffffff',             // Crisp white borders stand out against Voyager tiles
-        weight: 1.2,                  // Clean, modern boundary line thickness
+        color: '#ffffff',              // Crisp white borders stand out against Voyager tiles
+        weight: 1.2,                   // Clean, modern boundary line thickness
         fillColor: feature.properties.color || '#ccc',
-        fillOpacity: 0.4              // Richer base opacity so colors aren't washed out
+        fillOpacity: 0.4               // Richer base opacity so colors aren't washed out
       }),
       onEachFeature: (feature, layer) => {
         const lang = feature.properties.language;
@@ -102,6 +102,7 @@ fetch('data/languages.geojson')
                 stroke="#ffffff"
                 stroke-width="1.8"
                 stroke-linejoin="round"
+                stroke-md5=""
               />
             </svg>
           </div>
@@ -136,11 +137,12 @@ fetch('data/languages.geojson')
         // Wikipedia Custom/Fallback integration 
         const customUrl = feature.properties.wikipedia || `https://en.wikipedia.org/wiki/${lang.split('(')[0].trim()}_language`;
         
-        // Compact tight styling layout with no <br><br> drop
-        const wikiLinkHTML = `<div style="margin-top: 10px;"><a href="${customUrl}" target="_blank" style="color: #3498db; text-decoration: none; font-weight: bold; font-size: 13px;">Wikipedia Article →</a></div>`;
+        // Compact tight styling layout with no vertical padding bloat
+        const wikiLinkHTML = `<div style="margin-top: 6px;"><a href="${customUrl}" target="_blank" style="color: #3498db; text-decoration: none; font-weight: bold; font-size: 11px;">Wikipedia Article →</a></div>`;
 
         layer.bindPopup(
-          `<strong>${lang}</strong><div style="color: #5a6c7d; font-size: 13px; line-height: 1.5; margin-top: 4px;">${feature.properties.description || ''}</div>${wikiLinkHTML}`
+          `<strong style="font-size: 13px; line-height: 1.2; margin-bottom: 2px;">${lang}</strong><div style="color: #5a6c7d; font-size: 11px; line-height: 1.35;">${feature.properties.description || ''}</div>${wikiLinkHTML}`,
+          { maxWidth: 210 }
         );
       }
     }).addTo(map);
