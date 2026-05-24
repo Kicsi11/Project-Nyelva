@@ -74,6 +74,19 @@ body, html {
   background: rgba(255, 255, 255, 0.96) !important;
 }
 
+/* ===== SCALED-UP WELCOME POPUP OVERRIDES ===== */
+.intro-popup .leaflet-popup-content-wrapper {
+  background: rgba(255, 255, 255, 0.98) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+  padding: 6px !important;
+}
+
+.intro-popup .leaflet-popup-content {
+  max-width: 380px !important; /* Allows layout to spread naturally */
+  margin: 4px 6px !important;
+}
+
 /* ===== PREMIUM ZOOM CONTROLS MODERNIZE ===== */
 .leaflet-bar {
   border: 1px solid rgba(0, 0, 0, 0.1) !important;
