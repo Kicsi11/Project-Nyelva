@@ -14,7 +14,6 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r
 
 // ===== INTRODUCTION POPUP =====
 const introPopup = L.popup({
-  maxWidth: 210, // Matching the ultra-compact layout limits
   closeOnClick: true,
   autoClose: true,
   closeButton: true,
@@ -139,9 +138,9 @@ fetch('data/languages.geojson')
         // Compact layout styling with tight matching fonts
         const wikiLinkHTML = `<div style="margin-top: 6px;"><a href="${customUrl}" target="_blank" style="color: #3498db; text-decoration: none; font-weight: bold; font-size: 11px;">Wikipedia Article →</a></div>`;
 
+        // Removed the hardcoded maxWidth options constraint so the element behaves normally
         layer.bindPopup(
-          `<strong style="font-size: 13px; line-height: 1.2; margin-bottom: 2px;">${lang}</strong><div style="color: #5a6c7d; font-size: 11px; line-height: 1.35;">${feature.properties.description || ''}</div>${wikiLinkHTML}`,
-          { maxWidth: 210 } // Strict scale width container
+          `<strong style="font-size: 13px; line-height: 1.2; margin-bottom: 2px;">${lang}</strong><div style="color: #5a6c7d; font-size: 11px; line-height: 1.35;">${feature.properties.description || ''}</div>${wikiLinkHTML}`
         );
       }
     }).addTo(map);
