@@ -37,32 +37,32 @@ body, html {
   z-index: 99999 !important;
 }
 
-/* ===== PREMIUM MAP POPUP UPGRADES (BALANCED EDITION) ===== */
+/* ===== PREMIUM MAP POPUP UPGRADES (ULTRA-COMPACT EDITION) ===== */
 .leaflet-popup-content-wrapper {
   background: rgba(255, 255, 255, 0.96) !important;
   backdrop-filter: blur(8px);
-  border-radius: 10px !important; /* Clean, modern rounding */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1) !important;
-  padding: 2px !important; /* Trims excess inner container spacing */
+  border-radius: 8px !important; /* Sharper corners to sit nicely with miniature scale */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+  padding: 2px !important; /* Slashed container nesting footprint */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 .leaflet-popup-content {
-  margin: 10px 12px !important; /* Balanced padding limits empty gaps */
-  font-size: 13px !important; /* Perfect middle ground font size */
-  line-height: 1.45 !important; /* Clean line wrapping */
-  max-width: 240px !important; /* Keeps the container from getting too wide */
+  margin: 8px 10px !important; /* Tighter margins to eliminate wasted whitespace */
+  font-size: 11px !important; /* Scaled down base description layout size */
+  line-height: 1.35 !important; /* Snug row lines */
+  max-width: 210px !important; /* Locks width limits strictly */
 }
 
 .leaflet-popup-content strong {
-  font-size: 14px !important; /* Clearly readable header without being huge */
+  font-size: 13px !important; /* Reduced language title impact scale */
   color: #1a252f;
   display: block;
   margin-bottom: 2px;
 }
 
 .leaflet-popup-content a {
-  font-size: 12px !important;
+  font-size: 11px !important;
   transition: color 0.15s ease;
 }
 
