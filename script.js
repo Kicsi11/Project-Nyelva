@@ -26,10 +26,10 @@ const introPopup = L.popup({
       <h2 style="margin-top: 0; margin-bottom: 10px; font-size: 20px; color: #1a252f;">🌍 Welcome to Nyelva Map!</h2>
       <p style="font-size: 13px; line-height: 1.6; color: #5a6c7d; margin-bottom: 0;">
         Explore Earth's languages based on core origins and regional dominance. 
-        Linguistic boundaries are naturally fluid and historical—dive in to discover relationships across families.
+        Discover any language's ancestry, total speaker count, and real-time status at a single glance.
       </p>
       <div style="margin-top: 14px; display: inline-block; background: #eef2f5; padding: 4px 12px; border-radius: 12px; font-size: 11px; font-weight: 600; color: #7f8c8d;">
-        🎯 Currently Cataloging 59 Languages
+        🎯 Currently Cataloging 2 Lects
       </div>
     </div>
   `)
