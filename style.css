@@ -13,60 +13,56 @@ body, html {
 
 /* ===== PREMIUM INTERACTIVE DIAMOND EFFECT ===== */
 .custom-diamond-marker {
-  overflow: visible !important; /* Prevents Leaflet from clipping the expanded scale */
+  overflow: visible !important;
   z-index: 100 !important;
 }
 
-/* The steady outer container box */
 .diamond-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  pointer-events: auto; /* Ensures mouse triggers are smooth */
+  pointer-events: auto;
 }
 
-/* The actual graphic that handles the fluid swell effect */
 .diamond-wrapper svg {
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform-origin: center center;
 }
 
-/* When hovering over the steady container, smoothly scale only the inner vector asset */
 .diamond-wrapper:hover svg {
   transform: scale(1.35);
 }
 
-/* Bump the active node container to the absolute top of the map layer stack */
 .custom-diamond-marker:hover {
   z-index: 99999 !important;
 }
 
-/* ===== PREMIUM MAP POPUP UPGRADES (ULTRA-COMPACT EDITION) ===== */
+/* ===== PREMIUM MAP POPUP UPGRADES (BALANCED EDITION) ===== */
 .leaflet-popup-content-wrapper {
   background: rgba(255, 255, 255, 0.96) !important;
   backdrop-filter: blur(8px);
-  border-radius: 8px !important; /* Sharper corners to sit nicely with miniature scale */
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
-  padding: 2px !important; /* Slashed container nesting footprint */
+  border-radius: 10px !important; /* Clean, modern rounding */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1) !important;
+  padding: 2px !important; /* Trims excess inner container spacing */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 .leaflet-popup-content {
-  margin: 8px 10px !important; /* Tighter margins to eliminate waste whitespace */
-  font-size: 11px !important; /* Scaled down base description layout size */
-  line-height: 1.35 !important; /* Snug row lines */
-  max-width: 210px !important; /* Locks width limits strictly */
+  margin: 10px 12px !important; /* Balanced padding limits empty gaps */
+  font-size: 13px !important; /* Perfect middle ground font size */
+  line-height: 1.45 !important; /* Clean line wrapping */
+  max-width: 240px !important; /* Keeps the container from getting too wide */
 }
 
 .leaflet-popup-content strong {
-  font-size: 13px !important; /* Reduced language title impact scale */
+  font-size: 14px !important; /* Clearly readable header without being huge */
   color: #1a252f;
   display: block;
   margin-bottom: 2px;
 }
 
 .leaflet-popup-content a {
-  font-size: 11px !important;
+  font-size: 12px !important;
   transition: color 0.15s ease;
 }
 
@@ -96,18 +92,15 @@ body, html {
 /* ===== PREMIUM ABOUT BUTTON (FLOATING BOTTOM-MIDDLE) ===== */
 #about-btn {
   position: absolute;
-  bottom: 24px; /* Perfectly spaced near the bottom edge */
+  bottom: 24px;
   left: 50%;
-  transform: translateX(-50%); /* Centers the button horizontally */
+  transform: translateX(-50%);
   z-index: 1000;
-  
-  /* Glassmorphism Design */
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 30px; /* Sleek capsule shape */
+  border-radius: 30px;
   padding: 8px 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 13px;
@@ -115,7 +108,6 @@ body, html {
   color: #2c3e50;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  
   display: flex;
   align-items: center;
   gap: 6px;
@@ -131,7 +123,7 @@ body, html {
 #about-btn:hover {
   background: rgba(255, 255, 255, 1);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-  transform: translateX(-50%) translateY(-2px); /* Subtle hover lift */
+  transform: translateX(-50%) translateY(-2px);
 }
 
 /* ===== ABOUT PANEL OVERLAY ===== */
@@ -150,7 +142,6 @@ body, html {
   justify-content: center;
 }
 
-/* Panel Content Box */
 .about-content {
   background: white;
   padding: 30px;
@@ -190,7 +181,6 @@ body, html {
   margin-bottom: 10px;
 }
 
-/* Panel Close Cross Button */
 #about-close-btn {
   position: absolute;
   top: 14px;
@@ -207,12 +197,10 @@ body, html {
   color: #2c3e50;
 }
 
-/* Utility Hidden Class */
 .hidden {
   display: none !important;
 }
 
-/* Soft entry animation for modal panel */
 @keyframes modalFadeIn {
   from { opacity: 0; transform: scale(0.96); }
   to { opacity: 1; transform: scale(1); }
