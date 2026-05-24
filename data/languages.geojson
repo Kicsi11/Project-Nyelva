@@ -7,9 +7,9 @@
         "language": "Icelandic (íslenska)",
         "family": "Germanic language",
         "kind": "point",
-        "color": "#3498db",
+        "color": "blue",
         "size": "medium",
-        "description": "Ancestry: West Scandinavian, Germanic language<br>Total speakers: ~380,000<br>Status: Official language of Iceland",
+        "description": "Ancestry: West Scandinavian, Germanic language<br>Total speakers: ~380.000<br>Status: Official language of Iceland",
         "wikipedia": "https://en.wikipedia.org/wiki/Icelandic_language"
       },
       "geometry": {
@@ -17,7 +17,7 @@
         "coordinates": [-18.055308, 64.870641]
       }
     }, 
-    {
+{
       "type": "Feature",
       "properties": {
         "language": "Slovak (slovenčina)",
@@ -84,17 +84,17 @@
     {
       "type": "Feature",
       "properties": {
-        "language": "Manx (Gaelg)",
-        "family": "Celtic language",
+        "language": "Faroese (føroyskt)",
+        "family": "Germanic language",
         "kind": "point",
-        "color": "#e74c3c",
+        "color": "blue",
         "size": "small",
-        "description": "Ancestry: Indo-European → Celtic → Goidelic<br>Total speakers: 2,200 (Revival)<br>Status: Recognized Minority Language",
-        "wikipedia": "https://en.wikipedia.org/wiki/Manx_language"
+        "description": "Ancestry: West Scandinavian, Germanic language<br>Total speakers: ~72.000<br>Status: Official language of Faroe Islands",
+        "wikipedia": "https://en.wikipedia.org/wiki/Faroese_language"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-4.548, 54.2]
+        "coordinates": [-6.898894, 62.034862]
       }
     }
   ]
