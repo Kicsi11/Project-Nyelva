@@ -9,9 +9,7 @@
         "kind": "point",
         "color": "#3498db",
         "size": "medium",
-        "ancestry": "Indo-European → Germanic → West Scandinavian",
-        "speakers": "~380.000",
-        "status": "Official language of Iceland",
+        "description": "Ancestry: Indo-European → Germanic → West Scandinavian<br>Total speakers: 380,000<br>Status: Official language of Iceland",
         "wikipedia": "https://en.wikipedia.org/wiki/Icelandic_language"
       },
       "geometry": {
@@ -27,9 +25,7 @@
         "kind": "point",
         "color": "#2ecc71",
         "size": "medium",
-        "ancestry": "Indo-European → Slavic → West Slavic",
-        "speakers": "5.4 Million",
-        "status": "Official language of Slovakia",
+        "description": "Ancestry: Indo-European → Slavic → West Slavic<br>Total speakers: 5.4 Million<br>Status: Official language of Slovakia",
         "wikipedia": "https://en.wikipedia.org/wiki/Slovak_language"
       },
       "geometry": {
@@ -45,9 +41,7 @@
         "kind": "point",
         "color": "#2ecc71",
         "size": "small",
-        "ancestry": "Indo-European → Slavic → East Slavic",
-        "speakers": "70,000",
-        "status": "Recognized Minority Language",
+        "description": "Ancestry: Indo-European → Slavic → East Slavic<br>Total speakers: 70,000<br>Status: Recognized Minority Language",
         "wikipedia": "https://en.wikipedia.org/wiki/Rusyn_language"
       },
       "geometry": {
@@ -63,9 +57,7 @@
         "kind": "point",
         "color": "#3498db",
         "size": "large",
-        "ancestry": "Indo-European → Germanic → West Germanic",
-        "speakers": "1.5 Billion",
-        "status": "De Facto National",
+        "description": "Ancestry: Indo-European → Germanic → West Germanic<br>Total speakers: 1.5 Billion<br>Status: De Facto National",
         "wikipedia": "https://en.wikipedia.org/wiki/English_language"
       },
       "geometry": {
@@ -81,9 +73,7 @@
         "kind": "point",
         "color": "#3498db",
         "size": "medium",
-        "ancestry": "Indo-European → Germanic → West Germanic",
-        "speakers": "1.5 Million",
-        "status": "Recognized Regional Language",
+        "description": "Ancestry: Indo-European → Germanic → West Germanic<br>Total speakers: 1.5 Million<br>Status: Recognized Regional Language",
         "wikipedia": "https://en.wikipedia.org/wiki/Scots_language"
       },
       "geometry": {
@@ -99,9 +89,7 @@
         "kind": "point",
         "color": "#e74c3c",
         "size": "small",
-        "ancestry": "Indo-European → Celtic → Goidelic",
-        "speakers": "2,200 (Revival)",
-        "status": "Recognized Minority Language",
+        "description": "Ancestry: Indo-European → Celtic → Goidelic<br>Total speakers: 2,200 (Revival)<br>Status: Recognized Minority Language",
         "wikipedia": "https://en.wikipedia.org/wiki/Manx_language"
       },
       "geometry": {
