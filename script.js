@@ -14,7 +14,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r
 
 // ===== INTRODUCTION POPUP =====
 const introPopup = L.popup({
-  maxWidth: 320, // Clean intermediate frame limit
+  maxWidth: 210, // Matching the ultra-compact layout limits
   closeOnClick: true,
   autoClose: true,
   closeButton: true,
@@ -22,13 +22,13 @@ const introPopup = L.popup({
 })
   .setLatLng([20, 0]) // center of the map
   .setContent(`
-    <div style="text-align: center; font-family: -apple-system, sans-serif; color: #2c3e50; padding: 6px;">
-      <h2 style="margin-top: 0; margin-bottom: 8px; font-size: 16px; color: #1a252f;">🌍 Welcome to Nyelva Map!</h2>
-      <p style="font-size: 13px; line-height: 1.45; color: #5a6c7d; margin-bottom: 0;">
+    <div style="text-align: center; font-family: -apple-system, sans-serif; color: #2c3e50; padding: 4px;">
+      <h2 style="margin-top: 0; margin-bottom: 6px; font-size: 13px; color: #1a252f;">🌍 Welcome to Nyelva Map!</h2>
+      <p style="font-size: 11px; line-height: 1.35; color: #5a6c7d; margin-bottom: 0;">
         Explore Earth's languages based on core origins and regional dominance. 
         Discover any language's ancestry, total speaker count, and real-time status at a single glance.
       </p>
-      <div style="margin-top: 10px; display: inline-block; background: #eef2f5; padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; color: #7f8c8d;">
+      <div style="margin-top: 8px; display: inline-block; background: #eef2f5; padding: 3px 8px; border-radius: 12px; font-size: 10px; font-weight: 600; color: #7f8c8d;">
         🎯 Currently Cataloging 2 Lects
       </div>
     </div>
@@ -136,12 +136,12 @@ fetch('data/languages.geojson')
         // Wikipedia Custom/Fallback integration 
         const customUrl = feature.properties.wikipedia || `https://en.wikipedia.org/wiki/${lang.split('(')[0].trim()}_language`;
         
-        // Compact tight styling layout with an intermediate font size
-        const wikiLinkHTML = `<div style="margin-top: 8px;"><a href="${customUrl}" target="_blank" style="color: #3498db; text-decoration: none; font-weight: bold; font-size: 12px;">Wikipedia Article →</a></div>`;
+        // Compact layout styling with tight matching fonts
+        const wikiLinkHTML = `<div style="margin-top: 6px;"><a href="${customUrl}" target="_blank" style="color: #3498db; text-decoration: none; font-weight: bold; font-size: 11px;">Wikipedia Article →</a></div>`;
 
         layer.bindPopup(
-          `<strong style="font-size: 14px; line-height: 1.2; margin-bottom: 2px;">${lang}</strong><div style="color: #5a6c7d; font-size: 13px; line-height: 1.45;">${feature.properties.description || ''}</div>${wikiLinkHTML}`,
-          { maxWidth: 240 } // Balanced width restriction framework
+          `<strong style="font-size: 13px; line-height: 1.2; margin-bottom: 2px;">${lang}</strong><div style="color: #5a6c7d; font-size: 11px; line-height: 1.35;">${feature.properties.description || ''}</div>${wikiLinkHTML}`,
+          { maxWidth: 210 } // Strict scale width container
         );
       }
     }).addTo(map);
