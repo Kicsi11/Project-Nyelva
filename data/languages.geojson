@@ -20,65 +20,65 @@
 {
       "type": "Feature",
       "properties": {
-        "language": "Slovak (slovenčina)",
-        "family": "Slavic language",
+        "language": "Shelta (The Cant/Gammon)",
+        "family": "Celtic language",
         "kind": "point",
-        "color": "#2ecc71",
-        "size": "medium",
-        "description": "Ancestry: Indo-European → Slavic → West Slavic<br>Total speakers: 5.4 Million<br>Status: Official language of Slovakia",
-        "wikipedia": "https://en.wikipedia.org/wiki/Slovak_language"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [19.282193, 48.631457]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "language": "Rusyn (русиньскый язык)",
-        "family": "Slavic language",
-        "kind": "point",
-        "color": "#2ecc71",
+        "color": "blue",
         "size": "small",
-        "description": "Ancestry: Indo-European → Slavic → East Slavic<br>Total speakers: 70,000<br>Status: Recognized Minority Language",
-        "wikipedia": "https://en.wikipedia.org/wiki/Rusyn_language"
+        "description": "Ancestry: Celtic-Germanic language<br>Total speakers: ~50.000<br>Status: Recognised Minority Language",
+        "wikipedia": "https://en.wikipedia.org/wiki/Shelta"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [22.187206, 49.065949]
+        "coordinates": [-6.264313, 53.346422]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "language": "English",
-        "family": "Germanic language",
+        "language": "Irish (Gaeilge)",
+        "family": "Celtic language",
         "kind": "point",
-        "color": "#3498db",
-        "size": "large",
-        "description": "Ancestry: Indo-European → Germanic → West Germanic<br>Total speakers: 1.5 Billion<br>Status: De Facto National",
-        "wikipedia": "https://en.wikipedia.org/wiki/English_language"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-0.8, 52.0]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "language": "Scots",
-        "family": "Germanic language",
-        "kind": "point",
-        "color": "#3498db",
+        "color": "blue",
         "size": "medium",
-        "description": "Ancestry: Indo-European → Germanic → West Germanic<br>Total speakers: 1.5 Million<br>Status: Recognized Regional Language",
-        "wikipedia": "https://en.wikipedia.org/wiki/Scots_language"
+        "description": "Ancestry: Goidelic, Celtic language<br>Total speakers: ~1.87 Million<br>Status: Official Language of Ireland",
+        "wikipedia": "https://en.wikipedia.org/wiki/Irish_language"
       },
       "geometry": {
         "type": "Point",
-        "coordinates": [-3.5, 55.5]
+        "coordinates": [-8.693817, 53.261804]
+      }
+    },
+   {
+      "type": "Feature",
+      "properties": {
+        "language": "Hiberno-English",
+        "family": "Germanic language",
+        "kind": "point",
+        "color": "blue",
+        "size": "medium",
+        "description": "Ancestry: English dialect, Germanic language<br>Total speakers: ~7 Million<br>Status: Official Language of Ireland",
+        "wikipedia": "https://en.wikipedia.org/wiki/Hiberno-English"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-7.072703, 53.296414]
+      }
+    },
+   {
+      "type": "Feature",
+      "properties": {
+        "language": "Ulster Scots (Ulstèr-Scotch)",
+        "family": "Germanic language",
+        "kind": "point",
+        "color": "blue",
+        "size": "small",
+        "description": "Ancestry: Scots dialect, Germanic language<br>Total speakers: ~61.000<br>Status: Recognised Minority Language",
+        "wikipedia": "https://en.wikipedia.org/wiki/Ulster_Scots_dialect"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-6.918163, 54.613555]
       }
     },
     {
