@@ -20,6 +20,38 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Scots (Gàidhlig)",
+        "family": "Germanic language",
+        "kind": "point",
+        "color": "blue",
+        "size": "small",
+        "description": "Ancestry: Anglo-Frisian, Germanic language<br>Total speakers: ~1.5 Million<br>Status: Official Language of Scotland",
+        "wikipedia": "https://en.wikipedia.org/wiki/Scots_language"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.360071, 55.523500]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
+        "language": "Scottish Gaelic (Gàidhlig)",
+        "family": "Celtic language",
+        "kind": "point",
+        "color": "blue",
+        "size": "small",
+        "description": "Ancestry: Goidelic, Celtic language<br>Total speakers: ~70.000<br>Status: Official Language of Scotland",
+        "wikipedia": "https://en.wikipedia.org/wiki/Scottish_Gaelic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.216076, 56.773197]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Manx (Gaelg)",
         "family": "Celtic language",
         "kind": "point",
