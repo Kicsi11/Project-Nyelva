@@ -20,6 +20,38 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "British English",
+        "family": "Germanic language",
+        "kind": "point",
+        "color": "blue",
+        "size": "medium",
+        "description": "Ancestry: English dialect<br>Total speakers: ~68 Million<br>Status: Official Language of United Kingdom",
+        "wikipedia": "https://en.wikipedia.org/wiki/British_English"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.471553, 51.888867]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
+        "language": "Cornish (Kernewek)",
+        "family": "Celtic language",
+        "kind": "point",
+        "color": "blue",
+        "size": "small",
+        "description": "Ancestry: Brittonic, Celtic language<br>Total speakers: ~500<br>Status: Recognised Minority Language",
+        "wikipedia": "https://en.wikipedia.org/wiki/Cornish_language"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.597878, 50.459777]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Welsh (Cymraeg)",
         "family": "Celtic language",
         "kind": "point",
@@ -137,7 +169,7 @@
         "kind": "point",
         "color": "blue",
         "size": "small",
-        "description": "Ancestry: Scots dialect, Germanic language<br>Total speakers: ~61.000<br>Status: Recognised Minority Language",
+        "description": "Ancestry: Scots dialect<br>Total speakers: ~61.000<br>Status: Recognised Minority Language",
         "wikipedia": "https://en.wikipedia.org/wiki/Ulster_Scots_dialect"
       },
       "geometry": {
