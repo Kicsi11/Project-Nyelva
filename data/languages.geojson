@@ -9,7 +9,7 @@
         "kind": "point",
         "color": "blue",
         "size": "medium",
-        "description": "Ancestry: West Scandinavian, Germanic language<br>Total speakers: ~380.000<br>Status: Official language of Iceland",
+        "description": "Ancestry: West Scandinavian, Germanic language<br>Total speakers: ~380.000<br>Status: Official Language of Iceland",
         "wikipedia": "https://en.wikipedia.org/wiki/Icelandic_language"
       },
       "geometry": {
@@ -17,6 +17,22 @@
         "coordinates": [-18.055308, 64.870641]
       }
     }, 
+{
+      "type": "Feature",
+      "properties": {
+        "language": "Manx (Gaelg)",
+        "family": "Celtic language",
+        "kind": "point",
+        "color": "blue",
+        "size": "small",
+        "description": "Ancestry: Goidelic, Celtic language<br>Total speakers: ~0<br>Status: Official Language of Isle of Man",
+        "wikipedia": "https://en.wikipedia.org/wiki/Manx_language"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.517666, 54.219462]
+      }
+    },
 {
       "type": "Feature",
       "properties": {
