@@ -20,6 +20,22 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Welsh (Cymraeg)",
+        "family": "Celtic language",
+        "kind": "point",
+        "color": "blue",
+        "size": "small",
+        "description": "Ancestry: Brittonic, Celtic language<br>Total speakers: ~538.000<br>Status: Official Language of Wales",
+        "wikipedia": "https://en.wikipedia.org/wiki/Welsh_language"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-3.605943, 52.425370]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Scots",
         "family": "Germanic language",
         "kind": "point",
