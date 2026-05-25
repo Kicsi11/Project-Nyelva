@@ -20,6 +20,22 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Papiamento",
+        "family": "Creole language",
+        "kind": "point",
+        "color": "blue",
+        "size": "small",
+        "description": "Ancestry: Portuguese-based creole language<br>Total speakers: ~400.000<br>Status: Official Language Aruba, Curaçao, and Bonaire",
+        "wikipedia": "https://en.wikipedia.org/wiki/Papiamento"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-68.959308, 12.163108]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "British English",
         "family": "Germanic language",
         "kind": "point",
