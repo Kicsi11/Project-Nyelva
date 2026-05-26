@@ -20,12 +20,60 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Saterland Frisian (Seeltersk)",
+        "family": "Germanic language",
+        "kind": "point",
+        "color": "blue",
+        "size": "small",
+        "description": "Ancestry: Anglo-Frisian, Germanic language<br>Total speakers: ~2.200<br>Status: Recognised Minority Language",
+        "wikipedia": "https://en.wikipedia.org/wiki/Saterland_Frisian_language"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [7.857729, 53.018790]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
+        "language": "North Frisian (Nordfrasch)",
+        "family": "Germanic language",
+        "kind": "point",
+        "color": "blue",
+        "size": "small",
+        "description": "Ancestry: Anglo-Frisian, Germanic language<br>Total speakers: ~8.000<br>Status: Regional Language",
+        "wikipedia": "https://en.wikipedia.org/wiki/North_Frisian_language"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [8.498857, 54.714646]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
+        "language": "West Frisian (Frysk)",
+        "family": "Germanic language",
+        "kind": "point",
+        "color": "blue",
+        "size": "small",
+        "description": "Ancestry: Anglo-Frisian, Germanic language<br>Total speakers: ~470.000<br>Status: Regional Language",
+        "wikipedia": "https://en.wikipedia.org/wiki/West_Frisian_language"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.783963, 53.111916]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Papiamento",
         "family": "Creole language",
         "kind": "point",
         "color": "blue",
         "size": "small",
-        "description": "Ancestry: Portuguese-based creole language<br>Total speakers: ~400.000<br>Status: Official Language Aruba, Curaçao, and Bonaire",
+        "description": "Ancestry: Portuguese-based creole language<br>Total speakers: ~400.000<br>Status: Official Language od Aruba, Curaçao, and Bonaire",
         "wikipedia": "https://en.wikipedia.org/wiki/Papiamento"
       },
       "geometry": {
