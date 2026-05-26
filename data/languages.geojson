@@ -20,6 +20,22 @@
 {
       "type": "Feature",
       "properties": {
+        "language": "Dutch (Nederlands)",
+        "family": "Germanic language",
+        "kind": "point",
+        "color": "blue",
+        "size": "medium",
+        "description": "Ancestry: Low Franconian, Germanic language<br>Total speakers: ~30 Million<br>Status: Official Language of Netherlands, Belgium, and Suriname",
+        "wikipedia": "https://en.wikipedia.org/wiki/Dutch_language"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [5.700279, 52.068364]
+      }
+    },
+{
+      "type": "Feature",
+      "properties": {
         "language": "Saterland Frisian (Seeltersk)",
         "family": "Germanic language",
         "kind": "point",
