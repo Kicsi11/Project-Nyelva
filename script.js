@@ -30,7 +30,7 @@ const introPopup = L.popup({
         Discover any language's ancestry, total speaker count, and real-time status at a single glance.
       </p>
       <div style="display: inline-block; background: #eef2f5; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 600; color: #7f8c8d;">
-        🎯 Currently Cataloging 13 Lects
+        🎯 Currently Cataloging 16 Lects
       </div>
     </div>
   `)
